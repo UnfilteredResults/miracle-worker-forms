@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Check Authorization - The Miracle Worker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .info-box p {
+            color: #1565C0;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .authorization-text {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .authorization-text p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .checkbox-group {
+            margin: 20px 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+
+        .checkbox-item label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .signature-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .signature-section h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .signature-pad {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            cursor: crosshair;
+            touch-action: none;
+        }
+
+        .signature-buttons {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-clear {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-clear:hover {
+            background: #ee5555;
+        }
+
+        .btn-submit {
+            background: #667eea;
+            color: white;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .btn-submit:hover {
+            background: #5568d3;
+        }
+
+        .required {
+            color: #ff6b6b;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Clemson Little Theatre</h1>
+            <h2>The Miracle Worker</h2>
+            <p>Background Check Consent & Authorization</p>
+        </div>
+
+        <div class="info-box">
+            <p><strong>Important:</strong> All adults working with youth participants in CLT productions must complete a background check. This information will be kept confidential and used only for the purpose of conducting a background check.</p>
+            <p><strong>Note:</strong> Do NOT include your Social Security Number on this form for security reasons.</p>
+        </div>
+
+        <form id="backgroundForm" action="https://formsubmit.co/mike.shipley@clemsonlittletheatre.com" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="Background Check Authorization - Miracle Worker">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name <span class="required">*</span></label>
+                    <input type="text" id="firstName" name="First Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" id="middleName" name="Middle Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name <span class="required">*</span></label>
+                    <input type="text" id="lastName" name="Last Name" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="dob">Date of Birth <span class="required">*</span></label>
+                    <input type="date" id="dob" name="Date of Birth" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="driversLicense">Driver's License Number <span class="required">*</span></label>
+                    <input type="text" id="driversLicense" name="Drivers License" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dlState">DL State <span class="required">*</span></label>
+                    <input type="text" id="dlState" name="DL State" value="SC" required maxlength="2">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Current Address <span class="required">*</span></label>
+                <input type="text" id="address" name="Current Address" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="city">City <span class="required">*</span></label>
+                    <input type="text" id="city" name="City" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State <span class="required">*</span></label>
+                    <input type="text" id="state" name="State" value="SC" required maxlength="2">
+                </div>
+
+                <div class="form-group">
+                    <label for="zip">ZIP Code <span class="required">*</span></label>
+                    <input type="text" id="zip" name="ZIP Code" required pattern="[0-9]{5}">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="Phone Number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="Email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Role/Position with CLT <span class="required">*</span></label>
+                <input type="text" id="role" name="Role" required placeholder="e.g., Director, Stage Manager, Actor">
+            </div>
+
+            <div class="form-group">
+                <label for="previousAddress">Previous Address (if at current address less than 7 years)</label>
+                <input type="text" id="previousAddress" name="Previous Address" placeholder="Street, City, State, ZIP">
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 20px; color: #667eea;">Authorization</h3>
+
+            <div class="authorization-text">
+                <p><strong>I hereby authorize Clemson Little Theatre to conduct a comprehensive background check, including but not limited to:</strong></p>
+                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <li>Criminal history records</li>
+                    <li>Sex offender registry check</li>
+                    <li>Other public records as deemed necessary</li>
+                </ul>
+
+                <p>I understand that:</p>
+                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <li>The information provided will be kept confidential</li>
+                    <li>A background check is required before I can work with youth participants</li>
+                    <li>Certain findings may disqualify me from participating in CLT youth programs</li>
+                    <li>I may request a copy of the background check report</li>
+                    <li>This authorization is valid for the duration of my involvement with CLT</li>
+                </ul>
+
+                <p>I certify that all information provided is true and accurate to the best of my knowledge. I understand that any false statements or omissions may result in denial or revocation of my volunteer/staff status with Clemson Little Theatre.</p>
+            </div>
+
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="authorize" name="Authorize Background Check" value="Yes" required>
+                    <label for="authorize"><strong>I authorize CLT to conduct a background check using the information provided above <span class="required">*</span></strong></label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" id="accurate" name="Certify Accurate Information" value="Yes" required>
+                    <label for="accurate"><strong>I certify that all information provided is true and accurate <span class="required">*</span></strong></label>
+                </div>
+            </div>
+
+            <div class="signature-section">
+                <h3>Signature <span class="required">*</span></h3>
+                <p style="margin-bottom: 15px; color: #666; font-size: 0.9em;">By signing below, I authorize Clemson Little Theatre to conduct a background check.</p>
+                <canvas id="signaturePad" class="signature-pad" width="820" height="200"></canvas>
+                <div class="signature-buttons">
+                    <button type="button" class="btn btn-clear" onclick="clearSignature()">Clear Signature</button>
+                </div>
+                <input type="hidden" id="signatureData" name="Signature" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="printedName">Printed Name <span class="required">*</span></label>
+                    <input type="text" id="printedName" name="Printed Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signatureDate">Date <span class="required">*</span></label>
+                    <input type="date" id="signatureDate" name="Date" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Submit Background Check Authorization</button>
+        </form>
+    </div>
+
+    <script>
+        // Signature pad functionality
+        const canvas = document.getElementById('signaturePad');
+        const ctx = canvas.getContext('2d');
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = 2;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+
+        function getCoordinates(e) {
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+
+            if (e.touches) {
+                return {
+                    x: (e.touches[0].clientX - rect.left) * scaleX,
+                    y: (e.touches[0].clientY - rect.top) * scaleY
+                };
+            }
+            return {
+                x: (e.clientX - rect.left) * scaleX,
+                y: (e.clientY - rect.top) * scaleY
+            };
+        }
+
+        function startDrawing(e) {
+            isDrawing = true;
+            const coords = getCoordinates(e);
+            [lastX, lastY] = [coords.x, coords.y];
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            e.preventDefault();
+
+            const coords = getCoordinates(e);
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(coords.x, coords.y);
+            ctx.stroke();
+            [lastX, lastY] = [coords.x, coords.y];
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+        }
+
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+        canvas.addEventListener('touchstart', startDrawing);
+        canvas.addEventListener('touchmove', draw);
+        canvas.addEventListener('touchend', stopDrawing);
+
+        function clearSignature() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            document.getElementById('signatureData').value = '';
+        }
+
+        document.getElementById('backgroundForm').addEventListener('submit', function(e) {
+            const signatureData = canvas.toDataURL();
+            const blankCanvas = document.createElement('canvas');
+            blankCanvas.width = canvas.width;
+            blankCanvas.height = canvas.height;
+
+            if (signatureData === blankCanvas.toDataURL()) {
+                e.preventDefault();
+                alert('Please provide your signature before submitting.');
+                return false;
+            }
+
+            document.getElementById('signatureData').value = signatureData;
+        });
+
+        document.getElementById('signatureDate').valueAsDate = new Date();
+
+        // Auto-fill printed name
+        function updatePrintedName() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            if (firstName && lastName) {
+                const middleName = document.getElementById('middleName').value;
+                document.getElementById('printedName').value = firstName + (middleName ? ' ' + middleName : '') + ' ' + lastName;
+            }
+        }
+
+        document.getElementById('firstName').addEventListener('blur', updatePrintedName);
+        document.getElementById('middleName').addEventListener('blur', updatePrintedName);
+        document.getElementById('lastName').addEventListener('blur', updatePrintedName);
+    </script>
+</body>
+</html>
