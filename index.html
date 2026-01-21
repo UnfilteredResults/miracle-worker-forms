@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-purple-500 to-indigo-600 min-h-screen py-8 px-4">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
         <!-- Main Card -->
         <div class="card bg-base-100 shadow-2xl">
             <div class="card-body p-6 md:p-12">
@@ -29,106 +29,145 @@
                         <div class="mt-3">
                             <p class="font-semibold mb-2">How it works:</p>
                             <ul class="list-disc ml-6 space-y-1">
-                                <li>Click on each form card below to open it</li>
+                                <li>Find your section below (Adults or Youth)</li>
+                                <li>Click on each form card to open it</li>
                                 <li>Fill out all required fields (marked with <span class="text-error font-bold">*</span>)</li>
                                 <li>Sign using your mouse, trackpad, or finger (on touch devices)</li>
                                 <li>Click Submit - forms are emailed automatically to Mike Shipley</li>
-                                <li>You'll receive a confirmation once your submission is received</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Required Forms Section -->
-                <div class="divider divider-primary text-xl font-bold">Required Forms for Everyone</div>
+                <!-- Adult and Youth Forms Side by Side -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <!-- Adults Section -->
+                    <div class="border-2 border-accent rounded-lg p-6 bg-accent/5">
+                        <div class="flex items-center justify-center mb-6">
+                            <div class="badge badge-accent badge-lg text-lg py-4 px-6">Adults (18+)</div>
+                        </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    <!-- Emergency Contact Form -->
-                    <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('emergency_contact.html', '_blank')">
-                        <div class="card-body">
-                            <div class="badge badge-primary badge-lg mb-2">Required - All</div>
-                            <h3 class="card-title text-primary">Emergency Contact Form</h3>
-                            <p class="text-sm">Provide your contact information and emergency contact details. Required for all cast and crew members.</p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="emergency_contact.html" target="_blank" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">
-                                    Fill Out Form
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>
-                                </a>
+                        <div class="space-y-4">
+                            <!-- Emergency Contact - Adults -->
+                            <div class="card bg-base-200 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('emergency_contact.html', '_blank')">
+                                <div class="card-body p-4">
+                                    <div class="badge badge-primary mb-2">Required</div>
+                                    <h3 class="card-title text-sm text-primary">Emergency Contact Form</h3>
+                                    <p class="text-xs">Emergency contact information for all participants.</p>
+                                    <div class="card-actions justify-end mt-2">
+                                        <a href="emergency_contact.html" target="_blank" class="btn btn-primary btn-xs" onclick="event.stopPropagation()">
+                                            Fill Out Form →
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Adult Agreement -->
+                            <div class="card bg-base-200 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('adult_cast_crew_agreement.html', '_blank')">
+                                <div class="card-body p-4">
+                                    <div class="badge badge-primary mb-2">Required</div>
+                                    <h3 class="card-title text-sm text-primary">Adult Cast/Crew Agreement</h3>
+                                    <p class="text-xs">Participation agreement and media release for adult cast and crew members.</p>
+                                    <div class="card-actions justify-end mt-2">
+                                        <a href="adult_cast_crew_agreement.html" target="_blank" class="btn btn-primary btn-xs" onclick="event.stopPropagation()">
+                                            Fill Out Form →
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Youth Protection Policy -->
-                    <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('youth_protection_policy.html', '_blank')">
-                        <div class="card-body">
-                            <div class="badge badge-accent badge-lg mb-2">Adults Only</div>
-                            <h3 class="card-title text-primary">Youth Protection Policy & Background Check</h3>
-                            <p class="text-sm">Acknowledge CLT's Youth Protection Policy and authorize background check. Required for all adults (18+) working with youth participants. Includes background check authorization.</p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="youth_protection_policy.html" target="_blank" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">
-                                    Fill Out Form
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>
-                                </a>
+                    <!-- Youth Section -->
+                    <div class="border-2 border-error rounded-lg p-6 bg-error/5">
+                        <div class="flex items-center justify-center mb-6">
+                            <div class="badge badge-error badge-lg text-lg py-4 px-6">Youth (Under 18)</div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Emergency Contact - Youth -->
+                            <div class="card bg-base-200 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('emergency_contact.html', '_blank')">
+                                <div class="card-body p-4">
+                                    <div class="badge badge-primary mb-2">Required</div>
+                                    <h3 class="card-title text-sm text-primary">Emergency Contact Form</h3>
+                                    <p class="text-xs">Emergency contact information for all participants.</p>
+                                    <div class="card-actions justify-end mt-2">
+                                        <a href="emergency_contact.html" target="_blank" class="btn btn-primary btn-xs" onclick="event.stopPropagation()">
+                                            Fill Out Form →
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Youth Agreement -->
+                            <div class="card bg-base-200 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('youth_cast_crew_agreement.html', '_blank')">
+                                <div class="card-body p-4">
+                                    <div class="badge badge-primary mb-2">Required</div>
+                                    <h3 class="card-title text-sm text-primary">Youth Cast/Crew Agreement</h3>
+                                    <p class="text-xs">Must be completed by parent/guardian. Includes participation agreement and media release.</p>
+                                    <div class="card-actions justify-end mt-2">
+                                        <a href="youth_cast_crew_agreement.html" target="_blank" class="btn btn-primary btn-xs" onclick="event.stopPropagation()">
+                                            Fill Out Form →
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Cast & Crew Agreements Section -->
-                <div class="divider divider-primary text-xl font-bold">Cast & Crew Agreements</div>
+                <!-- Adult Volunteers Section -->
+                <div class="divider divider-primary text-xl font-bold">Adult Volunteers Working with Youth</div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    <!-- Adult Agreement -->
-                    <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('adult_cast_crew_agreement.html', '_blank')">
-                        <div class="card-body">
-                            <div class="badge badge-accent badge-lg mb-2">Adults (18+)</div>
-                            <h3 class="card-title text-primary">Adult Cast/Crew Agreement</h3>
-                            <p class="text-sm">Agreement and media release for adult participants (18 years and older). Includes participation terms and media consent.</p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="adult_cast_crew_agreement.html" target="_blank" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">
-                                    Fill Out Form
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Youth Agreement -->
-                    <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('youth_cast_crew_agreement.html', '_blank')">
-                        <div class="card-body">
-                            <div class="badge badge-error badge-lg mb-2">Youth (Under 18)</div>
-                            <h3 class="card-title text-primary">Youth Cast/Crew Agreement</h3>
-                            <p class="text-sm">Agreement and media release for youth participants (under 18). Must be completed by parent/guardian.</p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="youth_cast_crew_agreement.html" target="_blank" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">
-                                    Fill Out Form
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Checklist -->
-                <div class="alert alert-warning">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <div class="alert alert-warning mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Paperwork Checklist</h3>
-                        <p class="mb-2">Make sure you complete:</p>
-                        <ul class="list-disc ml-6 space-y-1 text-sm">
-                            <li><strong>Everyone:</strong> Emergency Contact Form</li>
-                            <li><strong>Adults (18+):</strong> Adult Cast/Crew Agreement + Youth Protection Policy & Background Check</li>
-                            <li><strong>Youth (Under 18):</strong> Youth Cast/Crew Agreement (completed by parent/guardian)</li>
-                        </ul>
-                        <p class="mt-3 text-xs italic">Note: Youth participants do NOT need to complete the Youth Protection Policy or Background Check - those are for adults only.</p>
+                        <p class="font-semibold">If you are an adult (18+) working with youth participants in any capacity, you must also complete the Youth Protection Policy & Background Check form below.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
+                    <!-- Youth Protection Policy -->
+                    <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer border-2 border-warning" onclick="window.open('youth_protection_policy.html', '_blank')">
+                        <div class="card-body">
+                            <div class="badge badge-warning badge-lg mb-2">Required for Adult Volunteers</div>
+                            <h3 class="card-title text-primary text-xl">Youth Protection Policy & Background Check</h3>
+                            <p class="text-sm">Acknowledge and agree to CLT's Youth Protection Policy and authorize a criminal background check. This comprehensive form includes both the policy acknowledgment and background check authorization in one document.</p>
+                            <div class="card-actions justify-end mt-4">
+                                <a href="youth_protection_policy.html" target="_blank" class="btn btn-warning btn-md" onclick="event.stopPropagation()">
+                                    Fill Out Form
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Reference Checklist -->
+                <div class="divider"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="card bg-accent/10 border-2 border-accent">
+                        <div class="card-body">
+                            <h3 class="card-title text-accent">✓ Adults (18+) Checklist</h3>
+                            <ul class="list-disc ml-6 space-y-1 text-sm">
+                                <li>Emergency Contact Form</li>
+                                <li>Adult Cast/Crew Agreement</li>
+                                <li><strong>If working with youth:</strong> Youth Protection Policy & Background Check</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-error/10 border-2 border-error">
+                        <div class="card-body">
+                            <h3 class="card-title text-error">✓ Youth (Under 18) Checklist</h3>
+                            <ul class="list-disc ml-6 space-y-1 text-sm">
+                                <li>Emergency Contact Form</li>
+                                <li>Youth Cast/Crew Agreement <span class="text-xs italic">(completed by parent/guardian)</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
