@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
             min-height: 100vh;
@@ -22,7 +22,7 @@
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
+            padding: 50px;
             border-radius: 10px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
@@ -30,24 +30,68 @@
         .header {
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 20px;
         }
 
         .header h1 {
-            color: #333;
-            margin-bottom: 10px;
+            color: #8B0000;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .header h2 {
-            color: #667eea;
-            font-size: 1.5em;
-            margin-bottom: 5px;
+            color: #000;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
 
-        .header p {
-            color: #666;
-            font-size: 0.9em;
+        .production-info {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            border: 2px solid #000;
+        }
+
+        .production-info td {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        .production-info td:first-child {
+            font-weight: bold;
+            width: 40%;
+            background: #e0e0e0;
+        }
+
+        .section-title {
+            color: #8B0000;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .content-text {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content-text ul {
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .content-text li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .content-text strong {
+            font-weight: bold;
         }
 
         .form-group {
@@ -57,89 +101,30 @@
         .form-group label {
             display: block;
             margin-bottom: 5px;
-            color: #333;
-            font-weight: 600;
+            color: #000;
+            font-weight: bold;
+            font-size: 0.95em;
         }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group input {
             width: 100%;
             padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
+            border: none;
+            border-bottom: 2px solid #000;
             font-size: 1em;
-            transition: border-color 0.3s;
+            background: transparent;
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
+        .form-group input:focus {
             outline: none;
-            border-color: #667eea;
+            border-bottom: 2px solid #667eea;
         }
 
         .form-row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 20px;
-        }
-
-        .section-title {
-            margin-top: 30px;
             margin-bottom: 20px;
-            color: #667eea;
-            font-size: 1.3em;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
-        }
-
-        .agreement-text {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            border-left: 4px solid #667eea;
-        }
-
-        .agreement-text p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .agreement-text ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        .agreement-text li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .checkbox-group {
-            margin: 20px 0;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 5px;
-        }
-
-        .checkbox-item input[type="checkbox"] {
-            width: auto;
-            margin-right: 10px;
-            margin-top: 3px;
-        }
-
-        .checkbox-item label {
-            font-weight: normal;
-            cursor: pointer;
         }
 
         .signature-section {
@@ -147,11 +132,13 @@
             padding: 20px;
             background: #f9f9f9;
             border-radius: 5px;
+            border: 2px solid #000;
         }
 
         .signature-section h3 {
             margin-bottom: 15px;
-            color: #333;
+            color: #000;
+            font-weight: bold;
         }
 
         .signature-pad {
@@ -160,10 +147,11 @@
             background: white;
             cursor: crosshair;
             touch-action: none;
+            margin-bottom: 10px;
         }
 
         .signature-buttons {
-            margin-top: 10px;
+            margin-bottom: 15px;
             display: flex;
             gap: 10px;
         }
@@ -193,6 +181,7 @@
             margin-top: 20px;
             font-size: 1.1em;
             font-weight: 600;
+            padding: 15px;
         }
 
         .btn-submit:hover {
@@ -203,13 +192,29 @@
             color: #ff6b6b;
         }
 
+        .subsection-title {
+            font-weight: bold;
+            font-size: 1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        .closing-text {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
         @media (max-width: 768px) {
             .form-row {
                 grid-template-columns: 1fr;
             }
 
             .container {
-                padding: 20px;
+                padding: 30px 20px;
             }
         }
     </style>
@@ -217,121 +222,195 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Clemson Little Theatre</h1>
-            <h2>The Miracle Worker</h2>
-            <p>Adult Cast & Crew Member Agreement</p>
+            <h1>THE CLEMSON LITTLE THEATRE</h1>
+            <h2>Adult Cast & Crew Member Agreement</h2>
         </div>
 
         <form id="agreementForm" action="https://api.web3forms.com/submit" method="POST">
             <!-- Web3Forms Configuration -->
             <input type="hidden" name="access_key" value="01c86d57-173b-4ad6-a227-421b6538aed6">
             <input type="hidden" name="subject" value="Adult Cast/Crew Agreement - Miracle Worker">
-            <input type="hidden" name="redirect" value="https://development.miracle-worker-forms.pages.dev/thank-you.html">
+            <input type="hidden" name="redirect" value="https://miracle-worker-forms.pages.dev/thank-you.html">
             <input type="hidden" name="from_name" value="Miracle Worker Forms">
 
+            <h3 style="font-weight: bold; margin-bottom: 15px;">Production Information & Key Contacts</h3>
+
+            <table class="production-info">
+                <tr>
+                    <td>Production Title:</td>
+                    <td>The Miracle Worker</td>
+                </tr>
+                <tr>
+                    <td>Performance Dates:</td>
+                    <td>Jan 30-Feb 8 2026</td>
+                </tr>
+                <tr>
+                    <td>Director:</td>
+                    <td>Phillip Rast</td>
+                </tr>
+                <tr>
+                    <td>Producer:</td>
+                    <td>Mike Shipley & Ireland Pfeiffer</td>
+                </tr>
+                <tr>
+                    <td>Tech/Dress Rehearsals:</td>
+                    <td>1/22/26-1/29/26</td>
+                </tr>
+            </table>
+
+            <h3 class="section-title">Our Mission</h3>
+            <div class="content-text">
+                <p>The Clemson Little Theatre fosters an inclusive and vibrant theatre community through diverse, high-quality theatrical productions that inspire creativity, connection, and dialogue. We are committed to providing a supportive and safe environment where every participant—onstage, backstage, and in the audience—feels valued and included.</p>
+            </div>
+
+            <h3 class="section-title">Welcome</h3>
+            <div class="content-text">
+                <p>Congratulations on being selected as a member of the cast or crew for this Clemson Little Theatre production! We are thrilled to have you and appreciate the time, commitment, and talents you bring as a volunteer. This agreement outlines expectations, procedures, and policies to ensure a safe, collaborative, and successful production experience for everyone involved. The Director is responsible for all casting, rehearsal scheduling, and creative decisions. The Producer supports the Director and serves as the liaison between the production team, cast, crew, and the CLT Board of Directors. Your first point of contact for any concerns should be the Director, followed by the Producer. We wish you a safe, fun, and enriching volunteer experience!</p>
+            </div>
+
+            <h3 class="section-title">Cast & Crew Expectations</h3>
+            <div class="content-text">
+                <ul>
+                    <li><strong>Be Prompt:</strong> Arrive at rehearsals at or before the designated start time. Communicate any conflicts with the Director as soon as possible. Punctuality demonstrates respect for everyone's volunteer time and ensures efficient rehearsals.</li>
+                    <li><strong>Be Prepared:</strong> Bring your script and a pencil to take notes on blocking, direction, and announcements. Review the rehearsal schedule and any Director's notes before arriving. Come ready to work.</li>
+                    <li><strong>Be Present:</strong> Give your full attention during rehearsals. While we value fun and camaraderie, producing excellent theatre requires focus and dedication. Active engagement with the Director's feedback is essential to success.</li>
+                    <li><strong>Be Respectful:</strong> Treat everyone in the theatre—actors, directors, production team, CLT staff, and audience members—with courtesy and respect. You represent CLT as a volunteer. Respect the property, personal space, and opinions of others.</li>
+                    <li><strong>Be Considerate:</strong> Think about how your words and actions affect others. We're all working together to create something special.</li>
+                    <li><strong>Embrace Inclusivity:</strong> CLT is committed to creating a welcoming, inclusive environment. We do not tolerate discrimination based on race, gender expression, sexuality, age, disability, or any other protected status. Bullying, intimidation, boundary violations, shaming, and aggressive or malicious attitudes have no place in our theatre.</li>
+                    <li><strong>Foster Collaboration:</strong> Community theatre is inherently collaborative. All participants are expected to support, contribute to, and appreciate the hard work involved in every aspect of production. We succeed together.</li>
+                    <li><strong>Communicate Effectively:</strong> Strong communication is vital to our success. Directors and Producers will maintain regular rehearsal schedules, clearly communicate expectations, and foster positive interactions. Cast and crew should reciprocate with open, respectful communication.</li>
+                </ul>
+            </div>
+
+            <h3 class="section-title">Rehearsal Procedures</h3>
+            <div class="content-text">
+                <ul>
+                    <li><strong>Attendance & Conflicts:</strong> Submit all foreseeable conflicts to the Director/Producer before the first rehearsal. This is critical for scheduling. All cast and production team members are expected to be present during Tech Week (the week leading to opening night). If an emergency arises, inform the Producer, Director, or Stage Manager immediately.</li>
+                    <li><strong>Memorization (Off-Book):</strong> The Director will announce when actors must have lines memorized. Practice your lines, blocking, songs, and choreography both inside and outside of the theatre. If you need assistance, ask the Director for guidance.</li>
+                    <li><strong>Theatre Move-In:</strong> When we transition from Cox Hall to the theatre, enter through the designated side door. Sign in and take a seat near the stage.</li>
+                    <li><strong>Theatre Entrance & Facility Policies:</strong> Wear appropriate, respectful attire and safe footwear, especially in the backstage workshop and onstage where hazards may exist. Keep the theatre and restrooms clean by properly disposing of trash and notifying the Producer if supplies need replenishing.</li>
+                    <li><strong>Youth Supervision (Mixed-Age Casts):</strong> Youth participants may not leave with anyone other than their parent or legal guardian unless prior written permission has been provided to the Director.</li>
+                </ul>
+            </div>
+
+            <h3 class="section-title">Theatre Etiquette & Safety Guidelines</h3>
+            <div class="content-text">
+                <p>These guidelines ensure a safe, professional environment and help preserve our historic theatre:</p>
+                <ul>
+                    <li><strong>Respect Our Space:</strong> Always leave the theatre cleaner than you found it. Clean up drinks, food wrappers, and personal items. Our building is historic and requires everyone's care. No food is allowed on stage or backstage—only water in bottles or cups with secure lids is permitted backstage.</li>
+                    <li><strong>Props Are Sacred:</strong> Never touch, move, or borrow another person's props without permission. Props are carefully placed for the show. If something seems misplaced, alert the Stage Manager.</li>
+                    <li><strong>Quiet Backstage:</strong> Maintain silence backstage and in the green room during rehearsals and performances. Voices and footsteps travel onto the stage and into the audience. Silence allows everyone to hear cues and preserves the magic of live theatre.</li>
+                    <li><strong>Cell Phones & Electronic Devices:</strong> Cell phones should never be brought on stage, even in pockets, where they could be a distraction. Please keep cell phones with your stuff. During tech rehearsals and performances, cell phones and electronic devices must remain silenced and stored with your belongings—not backstage or on stage. A ringing phone can disrupt the entire production.</li>
+                    <li><strong>Costume Care:</strong> Many costumes are vintage or custom-made. Treat them with care and always hang them neatly. All costume pieces must be on hangers or designated shelves—never left on the floor.</li>
+                    <li><strong>Tech Booth:</strong> The tech booth is reserved for sound, lighting, and projection operators only. No unauthorized personnel.</li>
+                    <li><strong>Safe Behavior:</strong> No running, roughhousing, or unsafe behavior in the theatre. These actions can cause serious injury and damage our historic stage.</li>
+                </ul>
+            </div>
+
+            <h3 class="section-title">Behavior Standards & Legal Expectations</h3>
+            <div class="content-text">
+                <p>The following standards and policies are mandatory for all CLT participants and are enforced to maintain a safe, legal, and respectful environment:</p>
+                <ul>
+                    <li><strong>Zero Tolerance for Abuse:</strong> Physical, verbal, or cyber abuse of any cast member, crew, production team, CLT staff, volunteer, or audience member will not be tolerated. If abuse crosses legal boundaries, local authorities will be notified.</li>
+                    <li><strong>Substance Policy:</strong> The consumption of alcohol during rehearsals or performances involving youth is prohibited. The use of illegal drugs and public intoxication are not permitted at any CLT event. Alcohol, firearms, and weapons are not allowed on CLT property. Limited exceptions to the alcohol policy may be made for properly supervised cast parties with Board approval.</li>
+                    <li><strong>Photography & Social Media:</strong> Photos and videos may not be taken during rehearsals or performances without the Director's permission and consent of those being photographed/recorded, especially if posting to personal social media. Approved publicity photos will be shared on official CLT channels as opening night approaches.</li>
+                    <li><strong>Property Damage:</strong> Damage to theatre property—including buildings, equipment, props, costumes, and sets—is prohibited. Participants who damage CLT property risk immediate removal from the production and will be held financially liable for any and all damages.</li>
+                </ul>
+            </div>
+
+            <h3 class="section-title">Waiver & Release of Liability</h3>
+            <div class="content-text">
+                <p>I understand that I am voluntarily participating in this production at my own risk. I am aware that participation involves inherent risks, including those arising from my own actions, the actions of others, travel to and from the theatre, and the condition of the facility. I knowingly assume all related risks and agree to hold harmless The Clemson Little Theatre, its directors, producers, board members, staff, employees, and volunteers from any and all claims, suits, or actions for liability, damages, compensation, or injury. In the event that I require medical care or treatment, I agree to be financially responsible for all costs incurred. I acknowledge that I should maintain my own health insurance and that the emergency contact information I have provided is the primary point of contact in case of a medical emergency.</p>
+            </div>
+
+            <h3 class="section-title">Expectations Adherence & Enforcement</h3>
+            <div class="content-text">
+                <p>CLT is committed to fair, consistent enforcement of expectations to maintain a positive environment for all volunteers. The following procedures will be followed when expectations are not met:</p>
+
+                <p class="subsection-title">General Expectation Infractions</p>
+                <p>Infractions of general expectations (punctuality, preparedness, respect, collaboration, etc.) should be reported to the Director and/or Producer. The Director/Producer will obtain a clear description of the issue and discuss it respectfully with the individual(s) involved. If a resolution cannot be reached, the matter will be presented to the Board of Directors for further action. After consultation with the Executive Board, the Director has the authority to remove a cast or crew member from the production if they fail to meet general expectations.</p>
+
+                <p>If the Director/Producer cannot resolve the issue, the Board of Directors will review a clear description of the circumstances and determine an appropriate course of action by majority vote. Potential actions include: (a) meeting directly with individuals to resolve the problem, (b) removing individuals from the current production, and/or (c) placing individuals on probation.</p>
+
+                <p class="subsection-title">Legal Expectation Infractions</p>
+                <p>Violations of legal expectations (abuse, substance use, property damage, etc.) must be reported to the Board of Directors through the Director/Producer. The Board will determine an appropriate course of action by majority vote. Potential actions include: (a) meeting directly with individuals to resolve the problem, (b) removing individuals from the current production, and/or (c) placing individuals on probation. In consultation with the Board, the Director and/or Producer may contact legal authorities if warranted. If anyone's physical or mental health is in immediate danger following an illegal infraction, the Director and/or Producer should contact legal authorities immediately.</p>
+
+                <p class="subsection-title">Probation Policy</p>
+                <p>At the discretion of the Board of Directors, probation may be assigned at one of two levels: (1) the individual will not be allowed to participate in CLT productions for one year, or (2) the individual may continue in the current production under probation with the understanding that a second infraction will result in a one-year suspension from all CLT activities.</p>
+            </div>
+
+            <h3 class="section-title">Participant Signature & Acknowledgment</h3>
+            <div class="content-text">
+                <p>I understand that the expectations and policies outlined in this agreement have been established to promote a positive theatre experience for all participants, audience members, and the CLT community. By signing this document, I acknowledge that I have read, understood, and agree to comply with all expectations, procedures, etiquette guidelines, and policies. I recognize that violations may result in the enforcement actions outlined in the Expectations Adherence & Enforcement section, including removal from the production and/or probation.</p>
+            </div>
+
             <div class="form-row">
                 <div class="form-group">
-                    <label for="firstName">First Name <span class="required">*</span></label>
-                    <input type="text" id="firstName" name="First Name" required>
+                    <label for="participantName">PARTICIPANT NAME (PRINTED) <span class="required">*</span></label>
+                    <input type="text" id="participantName" name="Participant Name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="lastName">Last Name <span class="required">*</span></label>
-                    <input type="text" id="lastName" name="Last Name" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="role">Role/Position <span class="required">*</span></label>
-                    <input type="text" id="role" name="Role" required placeholder="e.g., Stage Manager, Actor, Director">
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number <span class="required">*</span></label>
-                    <input type="tel" id="phone" name="Phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" name="Email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="address">Address <span class="required">*</span></label>
-                <input type="text" id="address" name="Address" required>
-            </div>
-
-            <h3 class="section-title">Member Agreement</h3>
-
-            <div class="agreement-text">
-                <p><strong>As a Cast or Crew Member of Clemson Little Theatre, I agree to:</strong></p>
-                <ul>
-                    <li>Attend all scheduled rehearsals, tech rehearsals, and performances unless excused by the Director or Stage Manager</li>
-                    <li>Be on time for all scheduled calls and remain until dismissed</li>
-                    <li>Follow all safety protocols and guidelines established by CLT</li>
-                    <li>Treat all cast, crew, staff, and volunteers with respect and professionalism</li>
-                    <li>Take care of all costumes, props, and theatre property</li>
-                    <li>Notify the Director or Stage Manager immediately if I am unable to attend a scheduled call</li>
-                    <li>Refrain from the use of alcohol or illegal substances before or during rehearsals and performances</li>
-                    <li>Support the artistic vision and decisions of the production team</li>
-                </ul>
-
-                <p><strong>I understand that:</strong></p>
-                <ul>
-                    <li>My participation in this production is voluntary</li>
-                    <li>Failure to comply with this agreement may result in removal from the production</li>
-                    <li>Theatre activities involve some inherent risks, and I assume responsibility for my own safety</li>
-                    <li>CLT reserves the right to use photographs and video recordings of rehearsals and performances for promotional purposes</li>
-                </ul>
-            </div>
-
-            <h3 class="section-title">Media Release</h3>
-
-            <div class="agreement-text">
-                <p>I grant Clemson Little Theatre permission to use photographs, video recordings, and audio recordings of me taken during rehearsals, performances, and related activities for promotional, educational, and archival purposes. This includes, but is not limited to:</p>
-                <ul>
-                    <li>Social media posts (Facebook, Instagram, Twitter, etc.)</li>
-                    <li>Website content and promotional materials</li>
-                    <li>Print advertising and press releases</li>
-                    <li>Video recordings for archival purposes</li>
-                </ul>
-                <p>I understand that I will not receive compensation for the use of these materials and that all materials become the property of Clemson Little Theatre.</p>
-            </div>
-
-            <div class="checkbox-group">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="agreeTerms" name="Agree to Terms" value="Yes" required>
-                    <label for="agreeTerms"><strong>I have read and agree to the Member Agreement terms above <span class="required">*</span></strong></label>
-                </div>
-
-                <div class="checkbox-item">
-                    <input type="checkbox" id="agreeMedia" name="Agree to Media Release" value="Yes" required>
-                    <label for="agreeMedia"><strong>I grant permission for CLT to use my image and likeness as described in the Media Release <span class="required">*</span></strong></label>
+                    <label for="participantDate1">DATE <span class="required">*</span></label>
+                    <input type="date" id="participantDate1" name="Participant Date" required>
                 </div>
             </div>
 
             <div class="signature-section">
-                <h3>Signature <span class="required">*</span></h3>
-                <p style="margin-bottom: 15px; color: #666; font-size: 0.9em;">By signing below, I acknowledge that I have read, understood, and agree to comply with all terms of this agreement.</p>
-                <canvas id="signaturePad" class="signature-pad" width="820" height="200"></canvas>
+                <h3>PARTICIPANT SIGNATURE <span class="required">*</span></h3>
+                <canvas id="signaturePad1" class="signature-pad" width="780" height="150"></canvas>
                 <div class="signature-buttons">
-                    <button type="button" class="btn btn-clear" onclick="clearSignature()">Clear Signature</button>
+                    <button type="button" class="btn btn-clear" onclick="clearSignature1()">Clear Signature</button>
                 </div>
-                <input type="hidden" id="signatureData" name="Signature" required>
+                <input type="hidden" id="signatureData1" name="Participant Signature" required>
             </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px; font-weight: bold;">For Youth Participants (under 18):</h3>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="printedName">Printed Name <span class="required">*</span></label>
-                    <input type="text" id="printedName" name="Printed Name" required>
+                    <label for="guardianName">PARENT/GUARDIAN NAME (PRINTED)</label>
+                    <input type="text" id="guardianName" name="Parent/Guardian Name">
                 </div>
 
                 <div class="form-group">
-                    <label for="signatureDate">Date <span class="required">*</span></label>
-                    <input type="date" id="signatureDate" name="Date" required>
+                    <label for="guardianDate">DATE</label>
+                    <input type="date" id="guardianDate" name="Parent/Guardian Date">
                 </div>
+            </div>
+
+            <div class="signature-section">
+                <h3>PARENT/GUARDIAN SIGNATURE</h3>
+                <p style="margin-bottom: 10px; font-size: 0.9em;">Only required if participant is under 18</p>
+                <canvas id="signaturePad2" class="signature-pad" width="780" height="150"></canvas>
+                <div class="signature-buttons">
+                    <button type="button" class="btn btn-clear" onclick="clearSignature2()">Clear Signature</button>
+                </div>
+                <input type="hidden" id="signatureData2" name="Parent/Guardian Signature">
+            </div>
+
+            <h3 class="section-title">Media Release Authorization</h3>
+            <div class="content-text">
+                <p>I grant permission for The Clemson Little Theatre to photograph and/or videotape me for the purpose of advertising and promoting CLT and its programs. This includes rights for all visual media including but not limited to: newspapers, local periodicals, websites, social media, and television. I understand there is no monetary compensation for the use of these images.</p>
+            </div>
+
+            <div class="signature-section">
+                <h3>MEDIA RELEASE SIGNATURE <span class="required">*</span></h3>
+                <canvas id="signaturePad3" class="signature-pad" width="780" height="150"></canvas>
+                <div class="signature-buttons">
+                    <button type="button" class="btn btn-clear" onclick="clearSignature3()">Clear Signature</button>
+                </div>
+                <input type="hidden" id="signatureData3" name="Media Release Signature" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mediaDate">DATE <span class="required">*</span></label>
+                <input type="date" id="mediaDate" name="Media Release Date" required>
+            </div>
+
+            <div class="closing-text">
+                <p><strong>Thank you for being part of The Clemson Little Theatre family!</strong></p>
+                <p>Together, we create magic on stage.</p>
             </div>
 
             <button type="submit" class="btn btn-submit">Submit Agreement</button>
@@ -339,23 +418,22 @@
     </div>
 
     <script>
-        // Signature pad functionality
-        const canvas = document.getElementById('signaturePad');
-        const ctx = canvas.getContext('2d');
-        let isDrawing = false;
-        let lastX = 0;
-        let lastY = 0;
+        // Signature pad 1 functionality
+        const canvas1 = document.getElementById('signaturePad1');
+        const ctx1 = canvas1.getContext('2d');
+        let isDrawing1 = false;
+        let lastX1 = 0;
+        let lastY1 = 0;
 
-        ctx.strokeStyle = '#000';
-        ctx.lineWidth = 2;
-        ctx.lineCap = 'round';
-        ctx.lineJoin = 'round';
+        ctx1.strokeStyle = '#000';
+        ctx1.lineWidth = 2;
+        ctx1.lineCap = 'round';
+        ctx1.lineJoin = 'round';
 
-        function getCoordinates(e) {
-            const rect = canvas.getBoundingClientRect();
-            const scaleX = canvas.width / rect.width;
-            const scaleY = canvas.height / rect.height;
-
+        function getCoordinates1(e) {
+            const rect = canvas1.getBoundingClientRect();
+            const scaleX = canvas1.width / rect.width;
+            const scaleY = canvas1.height / rect.height;
             if (e.touches) {
                 return {
                     x: (e.touches[0].clientX - rect.left) * scaleX,
@@ -368,69 +446,207 @@
             };
         }
 
-        function startDrawing(e) {
-            isDrawing = true;
-            const coords = getCoordinates(e);
-            [lastX, lastY] = [coords.x, coords.y];
+        function startDrawing1(e) {
+            isDrawing1 = true;
+            const coords = getCoordinates1(e);
+            [lastX1, lastY1] = [coords.x, coords.y];
         }
 
-        function draw(e) {
-            if (!isDrawing) return;
+        function draw1(e) {
+            if (!isDrawing1) return;
             e.preventDefault();
-
-            const coords = getCoordinates(e);
-            ctx.beginPath();
-            ctx.moveTo(lastX, lastY);
-            ctx.lineTo(coords.x, coords.y);
-            ctx.stroke();
-            [lastX, lastY] = [coords.x, coords.y];
+            const coords = getCoordinates1(e);
+            ctx1.beginPath();
+            ctx1.moveTo(lastX1, lastY1);
+            ctx1.lineTo(coords.x, coords.y);
+            ctx1.stroke();
+            [lastX1, lastY1] = [coords.x, coords.y];
         }
 
-        function stopDrawing() {
-            isDrawing = false;
+        function stopDrawing1() {
+            isDrawing1 = false;
         }
 
-        canvas.addEventListener('mousedown', startDrawing);
-        canvas.addEventListener('mousemove', draw);
-        canvas.addEventListener('mouseup', stopDrawing);
-        canvas.addEventListener('mouseout', stopDrawing);
-        canvas.addEventListener('touchstart', startDrawing);
-        canvas.addEventListener('touchmove', draw);
-        canvas.addEventListener('touchend', stopDrawing);
+        canvas1.addEventListener('mousedown', startDrawing1);
+        canvas1.addEventListener('mousemove', draw1);
+        canvas1.addEventListener('mouseup', stopDrawing1);
+        canvas1.addEventListener('mouseout', stopDrawing1);
+        canvas1.addEventListener('touchstart', startDrawing1);
+        canvas1.addEventListener('touchmove', draw1);
+        canvas1.addEventListener('touchend', stopDrawing1);
 
-        function clearSignature() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            document.getElementById('signatureData').value = '';
+        function clearSignature1() {
+            ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+            document.getElementById('signatureData1').value = '';
         }
 
+        // Signature pad 2 functionality (parent/guardian)
+        const canvas2 = document.getElementById('signaturePad2');
+        const ctx2 = canvas2.getContext('2d');
+        let isDrawing2 = false;
+        let lastX2 = 0;
+        let lastY2 = 0;
+
+        ctx2.strokeStyle = '#000';
+        ctx2.lineWidth = 2;
+        ctx2.lineCap = 'round';
+        ctx2.lineJoin = 'round';
+
+        function getCoordinates2(e) {
+            const rect = canvas2.getBoundingClientRect();
+            const scaleX = canvas2.width / rect.width;
+            const scaleY = canvas2.height / rect.height;
+            if (e.touches) {
+                return {
+                    x: (e.touches[0].clientX - rect.left) * scaleX,
+                    y: (e.touches[0].clientY - rect.top) * scaleY
+                };
+            }
+            return {
+                x: (e.clientX - rect.left) * scaleX,
+                y: (e.clientY - rect.top) * scaleY
+            };
+        }
+
+        function startDrawing2(e) {
+            isDrawing2 = true;
+            const coords = getCoordinates2(e);
+            [lastX2, lastY2] = [coords.x, coords.y];
+        }
+
+        function draw2(e) {
+            if (!isDrawing2) return;
+            e.preventDefault();
+            const coords = getCoordinates2(e);
+            ctx2.beginPath();
+            ctx2.moveTo(lastX2, lastY2);
+            ctx2.lineTo(coords.x, coords.y);
+            ctx2.stroke();
+            [lastX2, lastY2] = [coords.x, coords.y];
+        }
+
+        function stopDrawing2() {
+            isDrawing2 = false;
+        }
+
+        canvas2.addEventListener('mousedown', startDrawing2);
+        canvas2.addEventListener('mousemove', draw2);
+        canvas2.addEventListener('mouseup', stopDrawing2);
+        canvas2.addEventListener('mouseout', stopDrawing2);
+        canvas2.addEventListener('touchstart', startDrawing2);
+        canvas2.addEventListener('touchmove', draw2);
+        canvas2.addEventListener('touchend', stopDrawing2);
+
+        function clearSignature2() {
+            ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+            document.getElementById('signatureData2').value = '';
+        }
+
+        // Signature pad 3 functionality (media release)
+        const canvas3 = document.getElementById('signaturePad3');
+        const ctx3 = canvas3.getContext('2d');
+        let isDrawing3 = false;
+        let lastX3 = 0;
+        let lastY3 = 0;
+
+        ctx3.strokeStyle = '#000';
+        ctx3.lineWidth = 2;
+        ctx3.lineCap = 'round';
+        ctx3.lineJoin = 'round';
+
+        function getCoordinates3(e) {
+            const rect = canvas3.getBoundingClientRect();
+            const scaleX = canvas3.width / rect.width;
+            const scaleY = canvas3.height / rect.height;
+            if (e.touches) {
+                return {
+                    x: (e.touches[0].clientX - rect.left) * scaleX,
+                    y: (e.touches[0].clientY - rect.top) * scaleY
+                };
+            }
+            return {
+                x: (e.clientX - rect.left) * scaleX,
+                y: (e.clientY - rect.top) * scaleY
+            };
+        }
+
+        function startDrawing3(e) {
+            isDrawing3 = true;
+            const coords = getCoordinates3(e);
+            [lastX3, lastY3] = [coords.x, coords.y];
+        }
+
+        function draw3(e) {
+            if (!isDrawing3) return;
+            e.preventDefault();
+            const coords = getCoordinates3(e);
+            ctx3.beginPath();
+            ctx3.moveTo(lastX3, lastY3);
+            ctx3.lineTo(coords.x, coords.y);
+            ctx3.stroke();
+            [lastX3, lastY3] = [coords.x, coords.y];
+        }
+
+        function stopDrawing3() {
+            isDrawing3 = false;
+        }
+
+        canvas3.addEventListener('mousedown', startDrawing3);
+        canvas3.addEventListener('mousemove', draw3);
+        canvas3.addEventListener('mouseup', stopDrawing3);
+        canvas3.addEventListener('mouseout', stopDrawing3);
+        canvas3.addEventListener('touchstart', startDrawing3);
+        canvas3.addEventListener('touchmove', draw3);
+        canvas3.addEventListener('touchend', stopDrawing3);
+
+        function clearSignature3() {
+            ctx3.clearRect(0, 0, canvas3.width, canvas3.height);
+            document.getElementById('signatureData3').value = '';
+        }
+
+        // Form submission
         document.getElementById('agreementForm').addEventListener('submit', function(e) {
-            const signatureData = canvas.toDataURL();
-            const blankCanvas = document.createElement('canvas');
-            blankCanvas.width = canvas.width;
-            blankCanvas.height = canvas.height;
+            // Check participant signature
+            const signatureData1 = canvas1.toDataURL();
+            const blankCanvas1 = document.createElement('canvas');
+            blankCanvas1.width = canvas1.width;
+            blankCanvas1.height = canvas1.height;
 
-            if (signatureData === blankCanvas.toDataURL()) {
+            if (signatureData1 === blankCanvas1.toDataURL()) {
                 e.preventDefault();
-                alert('Please provide your signature before submitting.');
+                alert('Please provide your participant signature before submitting.');
                 return false;
             }
 
-            document.getElementById('signatureData').value = signatureData;
+            // Check media release signature
+            const signatureData3 = canvas3.toDataURL();
+            const blankCanvas3 = document.createElement('canvas');
+            blankCanvas3.width = canvas3.width;
+            blankCanvas3.height = canvas3.height;
+
+            if (signatureData3 === blankCanvas3.toDataURL()) {
+                e.preventDefault();
+                alert('Please provide your media release signature before submitting.');
+                return false;
+            }
+
+            // Save signatures
+            document.getElementById('signatureData1').value = signatureData1;
+            document.getElementById('signatureData3').value = signatureData3;
+
+            // Save guardian signature if provided
+            const signatureData2 = canvas2.toDataURL();
+            const blankCanvas2 = document.createElement('canvas');
+            blankCanvas2.width = canvas2.width;
+            blankCanvas2.height = canvas2.height;
+            if (signatureData2 !== blankCanvas2.toDataURL()) {
+                document.getElementById('signatureData2').value = signatureData2;
+            }
         });
 
-        document.getElementById('signatureDate').valueAsDate = new Date();
-
-        // Auto-fill printed name from first/last name
-        function updatePrintedName() {
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            if (firstName && lastName) {
-                document.getElementById('printedName').value = firstName + ' ' + lastName;
-            }
-        }
-
-        document.getElementById('firstName').addEventListener('blur', updatePrintedName);
-        document.getElementById('lastName').addEventListener('blur', updatePrintedName);
+        // Auto-fill today's date
+        document.getElementById('participantDate1').valueAsDate = new Date();
+        document.getElementById('mediaDate').valueAsDate = new Date();
     </script>
 </body>
 </html>

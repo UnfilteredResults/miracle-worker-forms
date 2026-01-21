@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
             min-height: 100vh;
@@ -22,7 +22,7 @@
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
+            padding: 50px;
             border-radius: 10px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
@@ -30,24 +30,66 @@
         .header {
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #000;
             padding-bottom: 20px;
         }
 
         .header h1 {
-            color: #333;
+            color: #000;
+            font-size: 1.8em;
+            font-weight: bold;
             margin-bottom: 10px;
         }
 
         .header h2 {
-            color: #667eea;
-            font-size: 1.5em;
+            color: #000;
+            font-size: 1.4em;
+            font-weight: bold;
             margin-bottom: 5px;
         }
 
-        .header p {
-            color: #666;
+        .revision-date {
+            text-align: right;
             font-size: 0.9em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+
+        .content-text {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content-text ul, .content-text ol {
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .content-text li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .content-text strong {
+            font-weight: bold;
+        }
+
+        .definitions {
+            margin-left: 20px;
+        }
+
+        .definitions > div {
+            margin-bottom: 15px;
         }
 
         .form-group {
@@ -57,93 +99,58 @@
         .form-group label {
             display: block;
             margin-bottom: 5px;
-            color: #333;
-            font-weight: 600;
+            color: #000;
+            font-weight: bold;
+            font-size: 0.95em;
         }
 
         .form-group input {
             width: 100%;
             padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
+            border: none;
+            border-bottom: 2px solid #000;
             font-size: 1em;
-            transition: border-color 0.3s;
+            background: transparent;
         }
 
         .form-group input:focus {
             outline: none;
-            border-color: #667eea;
+            border-bottom: 2px solid #667eea;
         }
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-        }
-
-        .section-title {
-            margin-top: 30px;
             margin-bottom: 20px;
-            color: #667eea;
-            font-size: 1.3em;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
         }
 
-        .policy-text {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            border-left: 4px solid #667eea;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .policy-text h4 {
-            color: #667eea;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        .policy-text p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .policy-text ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        .policy-text li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .checkbox-group {
+        .gender-group {
             margin: 20px 0;
         }
 
-        .checkbox-item {
+        .gender-options {
+            display: inline-flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .gender-option {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 5px;
+            align-items: center;
+            gap: 10px;
         }
 
-        .checkbox-item input[type="checkbox"] {
-            width: auto;
-            margin-right: 10px;
-            margin-top: 3px;
+        .gender-option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
         }
 
-        .checkbox-item label {
+        .gender-option label {
             font-weight: normal;
             cursor: pointer;
+            margin: 0;
         }
 
         .signature-section {
@@ -151,11 +158,13 @@
             padding: 20px;
             background: #f9f9f9;
             border-radius: 5px;
+            border: 2px solid #000;
         }
 
         .signature-section h3 {
             margin-bottom: 15px;
-            color: #333;
+            color: #000;
+            font-weight: bold;
         }
 
         .signature-pad {
@@ -164,10 +173,11 @@
             background: white;
             cursor: crosshair;
             touch-action: none;
+            margin-bottom: 10px;
         }
 
         .signature-buttons {
-            margin-top: 10px;
+            margin-bottom: 15px;
             display: flex;
             gap: 10px;
         }
@@ -197,6 +207,7 @@
             margin-top: 20px;
             font-size: 1.1em;
             font-weight: 600;
+            padding: 15px;
         }
 
         .btn-submit:hover {
@@ -207,137 +218,231 @@
             color: #ff6b6b;
         }
 
+        .acknowledgement-box {
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 30px 0;
+            background: #f9f9f9;
+        }
+
+        .acknowledgement-box p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
         @media (max-width: 768px) {
             .form-row {
                 grid-template-columns: 1fr;
             }
 
             .container {
-                padding: 20px;
+                padding: 30px 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="revision-date">The Clemson Little Theatre Youth Protection Policy - rev 8/12/25</div>
+
         <div class="header">
-            <h1>Clemson Little Theatre</h1>
-            <h2>The Miracle Worker</h2>
-            <p>Youth Protection Policy Acknowledgment</p>
+            <h1>The Clemson Little Theatre</h1>
+            <h2>Youth Protection Policy</h2>
         </div>
 
         <form id="policyForm" action="https://api.web3forms.com/submit" method="POST">
             <!-- Web3Forms Configuration -->
             <input type="hidden" name="access_key" value="01c86d57-173b-4ad6-a227-421b6538aed6">
             <input type="hidden" name="subject" value="Youth Protection Policy Acknowledgment - Miracle Worker">
-            <input type="hidden" name="redirect" value="https://development.miracle-worker-forms.pages.dev/thank-you.html">
+            <input type="hidden" name="redirect" value="https://miracle-worker-forms.pages.dev/thank-you.html">
             <input type="hidden" name="from_name" value="Miracle Worker Forms">
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="firstName">First Name <span class="required">*</span></label>
-                    <input type="text" id="firstName" name="First Name" required>
+            <h3 class="section-title">Policy Statement</h3>
+            <div class="content-text">
+                <p>The Clemson Little Theatre (CLT) is committed to maintaining a safe, nurturing environment for all youth participants. CLT has zero tolerance for child abuse in any form. We prioritize the safety and well-being of young people through comprehensive protective measures, careful supervision, and clear guidelines for all interactions between adults and youth. This policy applies to all staff, Board members, cast members, students, volunteers, contractors, and anyone involved in CLT programs and productions. Questions regarding this policy should be directed to a Producer, Stage Manager, Teacher, Office Manager, Artistic Oversight Member, or any Board Member.</p>
+            </div>
+
+            <h3 class="section-title">Policy Summary</h3>
+            <div class="content-text">
+                <p>This policy establishes comprehensive youth protection standards for all CLT activities and programs. The following areas are covered by this policy:</p>
+                <ol>
+                    <li>Screening and Background Checks</li>
+                    <li>Fraternization</li>
+                    <li>Appropriate Touching</li>
+                    <li>Prohibited Language and Communications</li>
+                    <li>Social Media</li>
+                    <li>Child Abuse/Neglect - Mandatory Reporting</li>
+                    <li>Non-retaliation</li>
+                    <li>Disciplinary Action</li>
+                </ol>
+            </div>
+
+            <h3 class="section-title">Definitions</h3>
+            <div class="content-text">
+                <p>For purposes of all areas of CLT's Youth Protection Policy and any related policies, the following definitions apply:</p>
+                <div class="definitions">
+                    <div><strong>Adult:</strong> any person 18 years of age or older who is an actor, Board member, cast parent, employee, independent contractor, or volunteer at CLT.</div>
+                    <div><strong>Youth:</strong> any person 17 years of age or younger, involved in CLT programming, who is a student, actor, volunteer, intern, or employee, whether on-site or off-site. Individuals are considered a "Youth" at CLT throughout a particular program or production in which they are involved, even if they turn age 18 during the course of the program or production participation or are an 18-year-old high school student.</div>
+                    <div><strong>Private Space:</strong> All non-public spaces including office space, bathroom, rehearsal room, classroom, and all dressing rooms (including those within or adjacent to the green room). The Rule of 3 must be strictly followed in all dressing rooms at all times.</div>
+                    <div><strong>Semi-Private Space:</strong> Supervised areas with designated adult monitors where brief one-on-one interactions may occur as a practical necessity. This includes the green room when supervised by a designated parent volunteer. Any one-on-one time in these spaces should be very limited and temporary. If a child needs to remain in a semi-private space alone with an adult for a prolonged period, another adult should be notified and asked to join when possible.</div>
+                    <div><strong>Public Space:</strong> any common space, accessible to the general public or to those granted security access to the facilities including lobbies, theatres and hallways.</div>
+                    <div><strong>Rule of 3:</strong> CLT practices safe Adult to Youth ratios with a "Rule of 3", meaning no Adult will be one-on-one with Youth in Private Spaces. Semi-Private Spaces have modified supervision requirements as defined above. For the purposes of this Rule of 3, any Youth who starts the program or production at age 17 will be considered a Youth even if the individual turns 18 during their participation in the program or production.</div>
+                </div>
+            </div>
+
+            <h3 class="section-title">1. Screening and Background Checks</h3>
+            <div class="content-text">
+                <p>Employees, independent contractors, Board members, adult cast members and any other adult volunteers who interact with and/or have any contact whatsoever with any Youth while volunteering with CLT will be required to undergo a criminal background check and be screened through the National Sex Offender Registry. The costs of all such checks and screening will be paid for by CLT and results will be stored for two years by CLT.</p>
+                <p>Adult volunteers who work outside of Youth's activities at CLT and who do not have any contact with children while volunteering with CLT will be screened through the National Sex Offender Registry only, with any such results will be stored for two years by CLT.</p>
+                <p>Any and all candidates for employment and/or independent contractor status with CLT, as well as all existing employees and independent contractors, will undergo a criminal background check process along with the screening through the National Sex Offender Registry. All such candidates and or existing employees or contractors must cooperate in completing all necessary paperwork in connection therewith. Employment and independent contractor status will be contingent on satisfactory background check results as determined by CLT in its sole discretion.</p>
+            </div>
+
+            <h3 class="section-title">2. Fraternization</h3>
+            <div class="content-text">
+                <p><strong>Safe Ratios / Rule of 3:</strong> CLT practices safe Adult to Youth ratios with a 'Rule of 3', meaning no Adult will be one-on-one with Youth in Private Space. Specific guidelines with respect to fraternization include, without limitation:</p>
+                <p style="margin-left: 20px;"><strong>a.</strong> Adults must comply with the Rule of 3. However, should Adults need to work one-on-one with Youth (beginning of class while waiting for other students, end of class before student is picked up, during class for discussion, instruction, or coaching), the door to the Private Space will remain fully open (when applicable and safe to do so) providing visual access and connection to other areas of the building. Spaces such as bathrooms should never be used for one-on-one interactions.</p>
+                <p style="margin-left: 20px;"><strong>b.</strong> Transportation of Youth: Adults associated with CLT may only transport Youth under the following circumstances: (1) in emergency situations, (2) when specifically authorized in writing by a parent/guardian for a CLT-sanctioned activity, or (3) when multiple Youth are transported together. Personal social trips or unauthorized individual rides are strictly prohibited.</p>
+                <p style="margin-left: 20px;"><strong>c.</strong> Adults may not host or accept invitations to parties hosted by Youth or their family, unless the entire cast or class is invited and the Youth's parent/guardian is present.</p>
+                <p style="margin-left: 20px;"><strong>d.</strong> We recognize that Adults may have relationships with a Youth's family outside of CLT (whether familial or otherwise) and section b and c do not apply to those relationships and apply only to CLT related rides or parties.</p>
+                <p>Adults are prohibited from "dating" Youth or otherwise having outside personal contact with Youth, or encouraging an emotional and/or sexual relationship with a Youth who is in any way affiliated with the Theatre or its programs. State laws prohibit sexual contact or sexual intercourse with anyone under the age of 16. Consent of a minor is irrelevant in the eyes of the law. This includes improper touching; one must be aware that even a casual gesture may cause emotional injury, particularly to a child.</p>
+            </div>
+
+            <h3 class="section-title">3. Appropriate Touching</h3>
+            <div class="content-text">
+                <p>In order to help employees, contractors, Board members, and volunteers of CLT with providing a safe environment for all Youth CLT participants, CLT provides the following guidelines in regard to appropriate touching.</p>
+                <p style="margin-left: 20px;"><strong>a.</strong> Hugs and other forms of appropriate physical affection between CLT staff, independent contractors, Board members and volunteers are important and generally suitable in our environment of expressing oneself where the adults involved consent thereto.</p>
+                <p style="margin-left: 20px;"><strong>b.</strong> However, such physical touching should be appropriate in nature and closely monitored in relation to CLT's Youth, with any physical touching being appropriate to the situation, needs and/or age of the Youth. For example, it may be appropriate for a young child (ages 5-7) to sit on the lap of an adult during a class activity, but it is generally never appropriate for older children or teenagers to do the same.</p>
+                <p style="margin-left: 20px;"><strong>c.</strong> Any and all touching should be initiated by the Youth and should be an appropriate response to their need for comforting, encouragement, or affection. It should not be based upon the adult's emotional need.</p>
+                <p style="margin-left: 20px;"><strong>d.</strong> Any such appropriate touching should only occur in the presence of other staff, volunteers or independent contractors as it is much less likely that touching will be inappropriate or misconstrued as such when two adults are present and the touching is open to observation.</p>
+                <p style="margin-left: 20px;"><strong>e.</strong> A Youth's preference not to be touched should be respected at all times and no adult should ever force touching or affection upon a reluctant Youth.</p>
+                <p style="margin-left: 20px;"><strong>f.</strong> When touching a Youth, it is generally appropriate to touch the hand, shoulder or upper back. However, it is never appropriate to touch a child on any areas that would normally be covered by a bathing suit or that would otherwise be deemed objectionable for any reason.</p>
+                <p style="margin-left: 20px;"><strong>g.</strong> Staff, volunteers and independent contractors must promptly report to a Producer, Stage Manager, Teacher, Office Manager, Artistic Oversight Member, or Board Member any inappropriate behavior or touching by other adults.</p>
+                <p style="margin-left: 20px;"><strong>h.</strong> Touching is considered appropriate if necessary to protect a Youth from accident or injury or as required by nature of business (such as costuming, etc.).</p>
+            </div>
+
+            <h3 class="section-title">4. Prohibited Language and Communications</h3>
+            <div class="content-text">
+                <p>Adults and Youth are expected to conduct themselves with respectful behavior and to use age appropriate language at all times. Sharing of inappropriate language, images, materials and content is prohibited.</p>
+            </div>
+
+            <h3 class="section-title">5. Social Media and Electronic Communication</h3>
+            <div class="content-text">
+                <p>Adults are not permitted to be "friends" with or to follow Youth on any social media platforms, to send email and/or text messages, conduct phone calls, photograph or post images of Youth outside of formal communication relevant to the business of CLT. Where pre-existing relationships exist between an Adult and a Youth related to social media or other electronic communication, the Adult will notify in writing a Producer, Teacher, Office Manager, Artistic Oversight Member, or Board Member.</p>
+            </div>
+
+            <h3 class="section-title">6. Child Abuse/Neglect - Mandatory Reporting</h3>
+            <div class="content-text">
+                <p>South Carolina law requires that certain professionals (including Educational professionals) report suspected cases of child abuse or neglect, because they have unique opportunities to observe and interact with children. While the law does not specifically mention non-profit arts organizations like CLT, it does encourage all persons to report.</p>
+                <p>To report suspected child abuse or neglect, contact the SCDSS 24-hour, toll-free hotline at <strong>1-888-CARE4US or 1-888-227-3487</strong>. This hotline is available 24 hours a day, 7 days a week. Intake staff will assist the person making the report and assess the information provided to determine if an investigation is necessary. Contact 911 immediately if the situation is a life-threatening emergency.</p>
+                <p>An emergency is a situation where a child appears to face an immediate risk of abuse or neglect that could result in death or serious harm. In addition, the reporter should notify one of the following as soon as possible: a Producer, Stage Manager, Teacher, Office Manager, Artistic Oversight Member, or Board Member.</p>
+            </div>
+
+            <h3 class="section-title">7. Non-retaliation</h3>
+            <div class="content-text">
+                <p>CLT strictly prohibits retaliation against any person of any form in response to reports made in good faith under this policy, including retaliation against the reporter, the child with respect to whom the report was made, or anyone involved in a related investigation. Individuals who are found to have engaged in retaliation will be subject to discipline up to and including termination of employment. If there are any questions or concerns about retaliation please contact a Producer, Stage Manager, Teacher, Office Manager, Artistic Oversight Member, or Board Member.</p>
+            </div>
+
+            <h3 class="section-title">8. Disciplinary Action</h3>
+            <div class="content-text">
+                <p>Interaction with Youth that violates CLT policies will result in discipline, up to and including termination, as well as reporting of the incident to relevant authorities as required by law.</p>
+            </div>
+
+            <div class="acknowledgement-box">
+                <p><strong>I have read and understand The Clemson Little Theatre Youth Protection Policy and agree to abide by all terms set forth therein.</strong></p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="lastName">LAST NAME <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="Last Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstName">FIRST NAME <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="First Name" required>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="lastName">Last Name <span class="required">*</span></label>
-                    <input type="text" id="lastName" name="Last Name" required>
+                    <label for="production">PRODUCTION (OPTIONAL)</label>
+                    <input type="text" id="production" name="Production" value="The Miracle Worker">
                 </div>
+
+                <div class="signature-section">
+                    <h3>SIGNATURE <span class="required">*</span></h3>
+                    <canvas id="signaturePad" class="signature-pad" width="780" height="150"></canvas>
+                    <div class="signature-buttons">
+                        <button type="button" class="btn btn-clear" onclick="clearSignature()">Clear Signature</button>
+                    </div>
+                    <input type="hidden" id="signatureData" name="Signature" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signatureDate">DATE <span class="required">*</span></label>
+                    <input type="date" id="signatureDate" name="Date" required>
+                </div>
+            </div>
+
+            <h3 class="section-title">Acknowledgement and Authorization<br>for Criminal Background Check and Obtaining Other Information</h3>
+            <div class="content-text">
+                <p>As a condition of my potential employment/Board member/volunteer/and/or independent contractor status with The Clemson Little Theatre (CLT), I understand that CLT will conduct a criminal background check on me. I hereby consent to and agree to said background check as set forth in greater detail below.</p>
+                <p>By signing this Acknowledgement and Authorization, I authorize CLT and/or its agents or third-parties hired by CLT, to access any and all such relevant information as may be necessary to complete a criminal background check on me and/or any other background check deemed necessary by CLT for the purposes of my association with CLT as an employee, volunteer or independent contractor. I understand that the information obtained about me may include, but may not be limited to, my driving record, any records of my having been arrested, any civil or criminal legal proceedings in which I have been involved, and/or other information about me that can be legally obtained with or without my consent. I hereby consent to CLT's obtaining such information about me, and this writing shall serve as my consent for any person in possession of such information to provide it to CLT. In consideration of CLT's willingness to consider my application to be an employee, volunteer or independent contractor of CLT, I hereby release from liability all persons and/or entities supplying any such information in connection with any such background check. I hereby release CLT from any and all liability which may arise from the reasonable use of any such information obtained by way thereof for the purpose of determining if I be associated with CLT as an employee, volunteer or independent contractor. I agree to hold CLT harmless from any damages resulting from CLT requesting and/or obtaining the information described herein. I agree that a copy of this signed Acknowledgement and Authorization may be accepted with the same authority as the original. I understand that upon my request, I will be given a copy of the background report.</p>
+                <p><strong>I believe to the best of my knowledge that all information provided on this page is accurate, true and correct, and that I fully understand the terms of the Acknowledgement and Authorization. All of the information below is required, please fill it out completely.</strong></p>
+            </div>
+
+            <div class="form-group">
+                <label for="fullName">FULL NAME (FIRST MIDDLE LAST) <span class="required">*</span></label>
+                <input type="text" id="fullName" name="Full Name" required>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="role">Role/Position <span class="required">*</span></label>
-                    <input type="text" id="role" name="Role" required placeholder="e.g., Actor, Crew Member, Staff">
+                    <label for="dateOfBirth">DATE OF BIRTH <span class="required">*</span></label>
+                    <input type="date" id="dateOfBirth" name="Date of Birth" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address <span class="required">*</span></label>
-                    <input type="email" id="email" name="Email" required>
+                <div class="gender-group">
+                    <label style="font-weight: bold; font-size: 0.95em;">GENDER <span class="required">*</span></label>
+                    <div class="gender-options">
+                        <div class="gender-option">
+                            <input type="checkbox" id="genderMale" name="Gender" value="Male" onchange="handleGenderChange(this)">
+                            <label for="genderMale">Male</label>
+                        </div>
+                        <div class="gender-option">
+                            <input type="checkbox" id="genderFemale" name="Gender" value="Female" onchange="handleGenderChange(this)">
+                            <label for="genderFemale">Female</label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <h3 class="section-title">Youth Protection Policy</h3>
-
-            <div class="policy-text">
-                <p><strong>Clemson Little Theatre is committed to providing a safe environment for all youth participants. All adults working with youth must read and acknowledge this Youth Protection Policy.</strong></p>
-
-                <h4>1. Two-Deep Leadership</h4>
-                <p>At least two registered adult leaders, or one registered adult and a parent/guardian, must be present with youth at all times during CLT activities. This applies to all meetings, rehearsals, and events.</p>
-
-                <h4>2. No One-on-One Contact</h4>
-                <p>One-on-one contact between adult leaders and youth members is prohibited. If private conversations are necessary, they should take place within sight and hearing of other adults.</p>
-
-                <h4>3. Respecting Privacy</h4>
-                <p>Adult leaders must respect the privacy of youth in situations such as changing costumes and using restroom facilities. Adults should not be present in areas where youth are changing or using facilities unless absolutely necessary for safety.</p>
-
-                <h4>4. Prohibited Activities</h4>
-                <ul>
-                    <li>Physical discipline of youth participants</li>
-                    <li>Inappropriate physical contact or touching</li>
-                    <li>Verbal abuse, bullying, or harassment</li>
-                    <li>Use of alcohol, drugs, or tobacco in the presence of youth</li>
-                    <li>Sharing of inappropriate materials (sexual, violent, or discriminatory)</li>
-                    <li>Private electronic communications with youth (must include parent/guardian)</li>
-                    <li>Transporting youth alone in a vehicle</li>
-                </ul>
-
-                <h4>5. Appropriate Physical Contact</h4>
-                <p>Some physical contact is necessary in theatre (e.g., stage combat choreography, costume adjustments). This contact must be:</p>
-                <ul>
-                    <li>Necessary for the theatrical activity</li>
-                    <li>Explained and demonstrated in advance</li>
-                    <li>Performed in the presence of other adults</li>
-                    <li>Respectful and appropriate at all times</li>
-                </ul>
-
-                <h4>6. Reporting Concerns</h4>
-                <p>Any suspected abuse or inappropriate behavior must be reported immediately to CLT leadership. Mandated reporters must follow state reporting requirements.</p>
-
-                <h4>7. Background Checks</h4>
-                <p>All adults working with youth in CLT productions must complete a background check authorization and be approved before beginning work with youth participants.</p>
-
-                <h4>8. Social Media and Communications</h4>
-                <p>All electronic communications with youth must be transparent and include parents/guardians. Do not:</p>
-                <ul>
-                    <li>Send private messages to youth participants</li>
-                    <li>Share personal contact information with youth</li>
-                    <li>Connect with youth on personal social media accounts</li>
-                </ul>
+            <div class="form-group">
+                <label for="currentAddress">CURRENT ADDRESS (STREET, CITY, STATE AND ZIP CODE) <span class="required">*</span></label>
+                <input type="text" id="currentAddress" name="Current Address" required>
             </div>
 
-            <div class="checkbox-group">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="agreePolicy" name="Acknowledge Youth Protection Policy" value="Yes" required>
-                    <label for="agreePolicy"><strong>I have read and understand the CLT Youth Protection Policy and agree to comply with all provisions <span class="required">*</span></strong></label>
-                </div>
-
-                <div class="checkbox-item">
-                    <input type="checkbox" id="agreeReport" name="Agree to Report Concerns" value="Yes" required>
-                    <label for="agreeReport"><strong>I understand my responsibility to report any concerns or violations of this policy immediately <span class="required">*</span></strong></label>
-                </div>
+            <div class="form-group">
+                <label for="formerAddress">FORMER ADDRESS IF LESS THAN 7 YEARS (STREET, CITY, STATE AND ZIP CODE)</label>
+                <input type="text" id="formerAddress" name="Former Address">
             </div>
 
             <div class="signature-section">
-                <h3>Signature <span class="required">*</span></h3>
-                <p style="margin-bottom: 15px; color: #666; font-size: 0.9em;">By signing below, I acknowledge that I have read and agree to follow the CLT Youth Protection Policy.</p>
-                <canvas id="signaturePad" class="signature-pad" width="820" height="200"></canvas>
+                <h3>SIGNATURE <span class="required">*</span></h3>
+                <canvas id="signaturePad2" class="signature-pad" width="780" height="150"></canvas>
                 <div class="signature-buttons">
-                    <button type="button" class="btn btn-clear" onclick="clearSignature()">Clear Signature</button>
+                    <button type="button" class="btn btn-clear" onclick="clearSignature2()">Clear Signature</button>
                 </div>
-                <input type="hidden" id="signatureData" name="Signature" required>
+                <input type="hidden" id="signatureData2" name="Background Check Signature" required>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="printedName">Printed Name <span class="required">*</span></label>
-                    <input type="text" id="printedName" name="Printed Name" required>
-                </div>
+            <div class="form-group">
+                <label for="bgCheckDate">DATE <span class="required">*</span></label>
+                <input type="date" id="bgCheckDate" name="Background Check Date" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="signatureDate">Date <span class="required">*</span></label>
-                    <input type="date" id="signatureDate" name="Date" required>
-                </div>
+            <div class="content-text">
+                <p style="font-size: 0.9em; font-style: italic;">Please note your social security number may be required in the event screenings return multiple results for individuals with the same name. Should this happen you will be contacted directly by CLT staff.</p>
+                <p style="font-size: 0.9em; margin-top: 10px;"><strong>Please sign and return this form to The Clemson Little Theatre</strong></p>
+                <p style="font-size: 0.9em;">Submit completed forms to: CLT Office/Production Manager or email to: cltplays@gmail.com</p>
             </div>
 
             <button type="submit" class="btn btn-submit">Submit Youth Protection Policy Acknowledgment</button>
@@ -345,7 +450,21 @@
     </div>
 
     <script>
-        // Signature pad functionality
+        // Gender checkbox handling
+        function handleGenderChange(checkbox) {
+            const male = document.getElementById('genderMale');
+            const female = document.getElementById('genderFemale');
+
+            if (checkbox.checked) {
+                if (checkbox.id === 'genderMale') {
+                    female.checked = false;
+                } else {
+                    male.checked = false;
+                }
+            }
+        }
+
+        // Signature pad 1 functionality
         const canvas = document.getElementById('signaturePad');
         const ctx = canvas.getContext('2d');
         let isDrawing = false;
@@ -409,7 +528,82 @@
             document.getElementById('signatureData').value = '';
         }
 
+        // Signature pad 2 functionality
+        const canvas2 = document.getElementById('signaturePad2');
+        const ctx2 = canvas2.getContext('2d');
+        let isDrawing2 = false;
+        let lastX2 = 0;
+        let lastY2 = 0;
+
+        ctx2.strokeStyle = '#000';
+        ctx2.lineWidth = 2;
+        ctx2.lineCap = 'round';
+        ctx2.lineJoin = 'round';
+
+        function getCoordinates2(e) {
+            const rect = canvas2.getBoundingClientRect();
+            const scaleX = canvas2.width / rect.width;
+            const scaleY = canvas2.height / rect.height;
+
+            if (e.touches) {
+                return {
+                    x: (e.touches[0].clientX - rect.left) * scaleX,
+                    y: (e.touches[0].clientY - rect.top) * scaleY
+                };
+            }
+            return {
+                x: (e.clientX - rect.left) * scaleX,
+                y: (e.clientY - rect.top) * scaleY
+            };
+        }
+
+        function startDrawing2(e) {
+            isDrawing2 = true;
+            const coords = getCoordinates2(e);
+            [lastX2, lastY2] = [coords.x, coords.y];
+        }
+
+        function draw2(e) {
+            if (!isDrawing2) return;
+            e.preventDefault();
+
+            const coords = getCoordinates2(e);
+            ctx2.beginPath();
+            ctx2.moveTo(lastX2, lastY2);
+            ctx2.lineTo(coords.x, coords.y);
+            ctx2.stroke();
+            [lastX2, lastY2] = [coords.x, coords.y];
+        }
+
+        function stopDrawing2() {
+            isDrawing2 = false;
+        }
+
+        canvas2.addEventListener('mousedown', startDrawing2);
+        canvas2.addEventListener('mousemove', draw2);
+        canvas2.addEventListener('mouseup', stopDrawing2);
+        canvas2.addEventListener('mouseout', stopDrawing2);
+        canvas2.addEventListener('touchstart', startDrawing2);
+        canvas2.addEventListener('touchmove', draw2);
+        canvas2.addEventListener('touchend', stopDrawing2);
+
+        function clearSignature2() {
+            ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+            document.getElementById('signatureData2').value = '';
+        }
+
         document.getElementById('policyForm').addEventListener('submit', function(e) {
+            // Check gender selection
+            const maleChecked = document.getElementById('genderMale').checked;
+            const femaleChecked = document.getElementById('genderFemale').checked;
+
+            if (!maleChecked && !femaleChecked) {
+                e.preventDefault();
+                alert('Please select your gender.');
+                return false;
+            }
+
+            // Check policy signature
             const signatureData = canvas.toDataURL();
             const blankCanvas = document.createElement('canvas');
             blankCanvas.width = canvas.width;
@@ -417,26 +611,29 @@
 
             if (signatureData === blankCanvas.toDataURL()) {
                 e.preventDefault();
-                alert('Please provide your signature before submitting.');
+                alert('Please provide your policy acknowledgment signature before submitting.');
+                return false;
+            }
+
+            // Check background check signature
+            const signatureData2 = canvas2.toDataURL();
+            const blankCanvas2 = document.createElement('canvas');
+            blankCanvas2.width = canvas2.width;
+            blankCanvas2.height = canvas2.height;
+
+            if (signatureData2 === blankCanvas2.toDataURL()) {
+                e.preventDefault();
+                alert('Please provide your background check authorization signature before submitting.');
                 return false;
             }
 
             document.getElementById('signatureData').value = signatureData;
+            document.getElementById('signatureData2').value = signatureData2;
         });
 
+        // Auto-fill today's date
         document.getElementById('signatureDate').valueAsDate = new Date();
-
-        // Auto-fill printed name
-        function updatePrintedName() {
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            if (firstName && lastName) {
-                document.getElementById('printedName').value = firstName + ' ' + lastName;
-            }
-        }
-
-        document.getElementById('firstName').addEventListener('blur', updatePrintedName);
-        document.getElementById('lastName').addEventListener('blur', updatePrintedName);
+        document.getElementById('bgCheckDate').valueAsDate = new Date();
     </script>
 </body>
 </html>

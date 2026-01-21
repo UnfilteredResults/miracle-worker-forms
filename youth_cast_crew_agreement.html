@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
             min-height: 100vh;
@@ -22,7 +22,7 @@
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
+            padding: 50px;
             border-radius: 10px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
@@ -30,24 +30,78 @@
         .header {
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 20px;
         }
 
         .header h1 {
-            color: #333;
-            margin-bottom: 10px;
+            color: #8B0000;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .header h2 {
-            color: #667eea;
-            font-size: 1.5em;
-            margin-bottom: 5px;
+            color: #000;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
 
-        .header p {
-            color: #666;
-            font-size: 0.9em;
+        .production-info {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            border: 2px solid #000;
+        }
+
+        .production-info td {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        .production-info td:first-child {
+            font-weight: bold;
+            width: 40%;
+            background: #e0e0e0;
+        }
+
+        .section-title {
+            color: #8B0000;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .content-text {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content-text ul {
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .content-text li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .content-text ol {
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .content-text ol li {
+            margin-bottom: 10px;
+        }
+
+        .content-text strong {
+            font-weight: bold;
         }
 
         .form-group {
@@ -57,89 +111,30 @@
         .form-group label {
             display: block;
             margin-bottom: 5px;
-            color: #333;
-            font-weight: 600;
+            color: #000;
+            font-weight: bold;
+            font-size: 0.95em;
         }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group input {
             width: 100%;
             padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
+            border: none;
+            border-bottom: 2px solid #000;
             font-size: 1em;
-            transition: border-color 0.3s;
+            background: transparent;
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
+        .form-group input:focus {
             outline: none;
-            border-color: #667eea;
+            border-bottom: 2px solid #667eea;
         }
 
         .form-row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 20px;
-        }
-
-        .section-title {
-            margin-top: 30px;
             margin-bottom: 20px;
-            color: #667eea;
-            font-size: 1.3em;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
-        }
-
-        .agreement-text {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            border-left: 4px solid #667eea;
-        }
-
-        .agreement-text p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .agreement-text ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        .agreement-text li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .checkbox-group {
-            margin: 20px 0;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 5px;
-        }
-
-        .checkbox-item input[type="checkbox"] {
-            width: auto;
-            margin-right: 10px;
-            margin-top: 3px;
-        }
-
-        .checkbox-item label {
-            font-weight: normal;
-            cursor: pointer;
         }
 
         .signature-section {
@@ -147,11 +142,13 @@
             padding: 20px;
             background: #f9f9f9;
             border-radius: 5px;
+            border: 2px solid #000;
         }
 
         .signature-section h3 {
             margin-bottom: 15px;
-            color: #333;
+            color: #000;
+            font-weight: bold;
         }
 
         .signature-pad {
@@ -160,10 +157,11 @@
             background: white;
             cursor: crosshair;
             touch-action: none;
+            margin-bottom: 10px;
         }
 
         .signature-buttons {
-            margin-top: 10px;
+            margin-bottom: 15px;
             display: flex;
             gap: 10px;
         }
@@ -193,6 +191,7 @@
             margin-top: 20px;
             font-size: 1.1em;
             font-weight: 600;
+            padding: 15px;
         }
 
         .btn-submit:hover {
@@ -203,17 +202,20 @@
             color: #ff6b6b;
         }
 
-        .info-box {
-            background: #e3f2fd;
-            border-left: 4px solid #2196F3;
+        .important-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
             padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
         }
 
-        .info-box p {
-            color: #1565C0;
-            margin-bottom: 0;
+        .closing-text {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
         }
 
         @media (max-width: 768px) {
@@ -222,7 +224,7 @@
             }
 
             .container {
-                padding: 20px;
+                padding: 30px 20px;
             }
         }
     </style>
@@ -230,165 +232,191 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Clemson Little Theatre</h1>
-            <h2>The Miracle Worker</h2>
-            <p>Youth Cast & Crew Member Agreement (Under 18)</p>
-        </div>
-
-        <div class="info-box">
-            <p><strong>Note:</strong> This form must be completed by a parent or legal guardian for participants under 18 years of age.</p>
+            <h1>THE CLEMSON LITTLE THEATRE</h1>
+            <h2>Youth Cast & Crew Member Agreement</h2>
         </div>
 
         <form id="agreementForm" action="https://api.web3forms.com/submit" method="POST">
             <!-- Web3Forms Configuration -->
             <input type="hidden" name="access_key" value="01c86d57-173b-4ad6-a227-421b6538aed6">
             <input type="hidden" name="subject" value="Youth Cast/Crew Agreement - Miracle Worker">
-            <input type="hidden" name="redirect" value="https://development.miracle-worker-forms.pages.dev/thank-you.html">
+            <input type="hidden" name="redirect" value="https://miracle-worker-forms.pages.dev/thank-you.html">
             <input type="hidden" name="from_name" value="Miracle Worker Forms">
 
-            <h3 class="section-title">Youth Participant Information</h3>
+            <h3 style="font-weight: bold; margin-bottom: 15px;">Production Information & Key Contacts</h3>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="youthFirstName">Youth First Name <span class="required">*</span></label>
-                    <input type="text" id="youthFirstName" name="Youth First Name" required>
-                </div>
+            <table class="production-info">
+                <tr>
+                    <td>Production Title:</td>
+                    <td>The Miracle Worker</td>
+                </tr>
+                <tr>
+                    <td>Performance Dates:</td>
+                    <td>Jan 30-Feb 8 2026</td>
+                </tr>
+                <tr>
+                    <td>Director:</td>
+                    <td>Phillip Rast</td>
+                </tr>
+                <tr>
+                    <td>Producer:</td>
+                    <td>Mike Shipley & Ireland Pfeiffer</td>
+                </tr>
+                <tr>
+                    <td>Tech/Dress Rehearsals:</td>
+                    <td>1/22/26-1/29/26</td>
+                </tr>
+            </table>
 
-                <div class="form-group">
-                    <label for="youthLastName">Youth Last Name <span class="required">*</span></label>
-                    <input type="text" id="youthLastName" name="Youth Last Name" required>
-                </div>
+            <h3 class="section-title">Our Mission</h3>
+            <div class="content-text">
+                <p>The Clemson Little Theatre fosters an inclusive and vibrant theatre community through diverse, high-quality theatrical productions that inspire creativity, connection, and dialogue. We are committed to providing a supportive and safe environment where every participant—onstage, backstage, and in the audience—feels valued and included.</p>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="dateOfBirth">Date of Birth <span class="required">*</span></label>
-                    <input type="date" id="dateOfBirth" name="Date of Birth" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="age">Age <span class="required">*</span></label>
-                    <input type="number" id="age" name="Age" required min="0" max="17">
-                </div>
+            <h3 class="section-title">Welcome</h3>
+            <div class="content-text">
+                <p>Congratulations on being part of this production with The Clemson Little Theatre! We are thrilled to have you. Theatre is a collaborative art form built on trust, respect, and dedication from everyone involved. This agreement outlines our expectations and procedures to ensure we create a safe, positive, and successful experience for all participants. Please read through this document carefully with your parent or guardian.</p>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="role">Role/Position <span class="required">*</span></label>
-                    <input type="text" id="role" name="Role" required placeholder="e.g., Actor, Crew Member">
-                </div>
-
-                <div class="form-group">
-                    <label for="youthPhone">Youth Phone Number</label>
-                    <input type="tel" id="youthPhone" name="Youth Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="youthEmail">Youth Email Address</label>
-                <input type="email" id="youthEmail" name="Youth Email">
-            </div>
-
-            <h3 class="section-title">Parent/Guardian Information</h3>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="parentFirstName">Parent/Guardian First Name <span class="required">*</span></label>
-                    <input type="text" id="parentFirstName" name="Parent First Name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="parentLastName">Parent/Guardian Last Name <span class="required">*</span></label>
-                    <input type="text" id="parentLastName" name="Parent Last Name" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="parentPhone">Parent/Guardian Phone <span class="required">*</span></label>
-                    <input type="tel" id="parentPhone" name="Parent Phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####">
-                </div>
-
-                <div class="form-group">
-                    <label for="parentEmail">Parent/Guardian Email <span class="required">*</span></label>
-                    <input type="email" id="parentEmail" name="Parent Email" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="address">Address <span class="required">*</span></label>
-                <input type="text" id="address" name="Address" required>
-            </div>
-
-            <h3 class="section-title">Agreement Terms</h3>
-
-            <div class="agreement-text">
-                <p><strong>As the parent/guardian of the above-named youth participant, I agree to the following:</strong></p>
+            <h3 class="section-title">Cast & Crew Expectations</h3>
+            <div class="content-text">
                 <ul>
-                    <li>My child will attend all scheduled rehearsals, tech rehearsals, and performances unless excused by the Director or Stage Manager</li>
-                    <li>My child will be on time for all scheduled calls</li>
-                    <li>My child will follow all safety protocols and guidelines established by CLT</li>
-                    <li>My child will treat all cast, crew, staff, and volunteers with respect and professionalism</li>
-                    <li>My child will take care of all costumes, props, and theatre property</li>
-                    <li>I will notify the Director or Stage Manager immediately if my child is unable to attend a scheduled call</li>
-                    <li>I understand that theatre activities involve some inherent risks</li>
-                </ul>
-
-                <p><strong>I understand that:</strong></p>
-                <ul>
-                    <li>I am responsible for transportation to and from all rehearsals and performances</li>
-                    <li>My child must be picked up promptly at the end of each rehearsal or performance</li>
-                    <li>Adult supervision is required for all youth participants at all times</li>
-                    <li>Failure to comply with this agreement may result in removal from the production</li>
-                    <li>CLT is not responsible for injuries or accidents that may occur during participation</li>
+                    <li><strong>Be Prompt:</strong> Arrive at rehearsal at or before the designated start time. Being on time shows respect for everyone's commitment to the production.</li>
+                    <li><strong>Be Prepared:</strong> Bring your script, pencil, and water bottle to every rehearsal. Wear comfortable clothes and shoes appropriate for movement. If it's appropriate for school, it's appropriate for theatre.</li>
+                    <li><strong>Be Present:</strong> Give your full attention during rehearsals. While we want you to have fun, we also want to create an excellent show, which requires focus and dedication from everyone.</li>
+                    <li><strong>Be Respectful:</strong> Treat everyone in the theatre with courtesy and respect. Pay attention during rehearsals and avoid distracting others. Respect the property, personal space, and opinions of all cast, crew, and volunteers.</li>
+                    <li><strong>Be Considerate:</strong> Think about how your words and actions affect others. We're all working together to create something special.</li>
+                    <li><strong>Embrace Inclusivity:</strong> CLT celebrates diversity and does not tolerate discrimination or harassment based on race, ethnicity, gender identity, sexual orientation, age, religion, or disability. Cyberbullying is also prohibited.</li>
+                    <li><strong>Foster Collaboration:</strong> Community theatre is a team effort. Support your fellow cast and crew members, and appreciate the hard work everyone contributes.</li>
                 </ul>
             </div>
 
-            <h3 class="section-title">Youth Media Release</h3>
-
-            <div class="agreement-text">
-                <p>I grant Clemson Little Theatre permission to use photographs, video recordings, and audio recordings of my child taken during rehearsals, performances, and related activities for promotional, educational, and archival purposes. This includes:</p>
+            <h3 class="section-title">Rehearsal Procedures</h3>
+            <div class="content-text">
                 <ul>
-                    <li>Social media posts (Facebook, Instagram, Twitter, etc.)</li>
-                    <li>Website content and promotional materials</li>
-                    <li>Print advertising and press releases</li>
-                    <li>Video recordings for archival purposes</li>
+                    <li><strong>Attendance & Sign-In:</strong> You must sign in at every rehearsal. Your presence is essential to the success of the production. All conflicts should be submitted at auditions. If an emergency conflict arises, contact the Producer, Director, or Stage Manager immediately.</li>
+                    <li><strong>Memorization (Off-Book):</strong> The Director will announce when lines must be memorized. Practice your lines, blocking, songs, and choreography both inside and outside of rehearsal. If you need help with memorization, please ask the Director for guidance.</li>
+                    <li><strong>Theatre Move-In:</strong> When we transition from the rehearsal space to the theatre, enter through the designated side door. Sign in at the front of the theatre and take a seat as close to the stage as possible.</li>
+                    <li><strong>Transportation & Pick-Up:</strong> Youth participants who cannot drive themselves must be signed out by a parent or guardian after each rehearsal. Parents must inform CLT staff in writing (via Remind app, text, or email) if their child will be driving themselves or if someone other than a parent/guardian will be picking them up. Advance written permission is required for any transportation changes.</li>
+                    <li><strong>Missed Rehearsals:</strong> Please make every effort to attend all rehearsals you are called to. Missing an unexcused rehearsal affects the entire cast and crew, regardless of your role size. We understand emergencies happen—just communicate with the production team as soon as possible.</li>
                 </ul>
-                <p>I understand that my child will not receive compensation for the use of these materials.</p>
             </div>
 
-            <div class="checkbox-group">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="agreeTerms" name="Agree to Terms" value="Yes" required>
-                    <label for="agreeTerms"><strong>I have read and agree to the Agreement Terms above <span class="required">*</span></strong></label>
+            <h3 class="section-title">Theatre Etiquette & Safety Guidelines</h3>
+            <div class="content-text">
+                <p>These guidelines help us maintain a safe, professional environment and protect our historic theatre building:</p>
+                <ul>
+                    <li><strong>Respect Our Space:</strong> Always leave the theatre cleaner than you found it. Clean up any drinks, food, or personal items. Our building is historic and needs everyone's care. No food is allowed on stage or backstage—only water in bottles or cups with secure lids is permitted backstage.</li>
+                    <li><strong>Props Are Sacred:</strong> Never touch, move, or borrow another person's props, even if you think they should be somewhere else. Each prop is carefully placed for the show. If something seems misplaced, please alert the Stage Manager.</li>
+                    <li><strong>Quiet Backstage:</strong> Maintain silence backstage and in the green room during rehearsals and performances. Voices and footsteps carry onto the stage and into the audience. No shushing—it's often louder than talking! Your quiet allows everyone to hear cues and maintain the magic of the performance.</li>
+                    <li><strong>Cell Phones:</strong> Cell phones should never be brought on stage, even in pockets, where they could be a distraction. Please keep cell phones with your stuff. During tech rehearsals and performances, cell phones, tablets, and electronic devices must remain in the green room and are not permitted backstage or on stage at any time. A ringing phone can disrupt the entire show.</li>
+                    <li><strong>Costume Care:</strong> Many of our costumes are vintage or one-of-a-kind. Treat them with care and always hang them neatly on hangers. All costume pieces must be on hangers or designated shelves in the green room—never left on the floor.</li>
+                    <li><strong>Tech Booth:</strong> The tech booth is reserved for sound, lighting, and projection operators only. Actors and stage crew should not enter the tech booth.</li>
+                    <li><strong>Backstage Areas:</strong> Youth participants must inform the production team of their whereabouts at all times. You may not leave the building, enter the lobby restroom, or go outside without permission from the production team.</li>
+                    <li><strong>Auditorium Behavior:</strong> When not rehearsing, please sit quietly near the front of the auditorium. No running, roughhousing, or jumping off the stage—ever. These actions can cause serious injury and damage our historic stage.</li>
+                </ul>
+            </div>
+
+            <h3 class="section-title">Behavior Standards & Legal Expectations</h3>
+            <div class="content-text">
+                <p>CLT is committed to creating a safe, inclusive environment where everyone feels welcomed and valued. The following standards are mandatory for all participants:</p>
+                <p><strong>I/my child pledge(s) to uphold the following standards:</strong></p>
+                <ul>
+                    <li><strong>Respect for All:</strong> I will treat all cast members, production team, and volunteers with respect. Physical, verbal, or cyber abuse of any kind will not be tolerated.</li>
+                    <li><strong>Appropriate Language:</strong> I will not use inappropriate, offensive, or threatening language in the theatre or on theatre property.</li>
+                    <li><strong>Prohibited Items:</strong> I will not bring drugs, alcohol, tobacco, vaping devices, firearms, or weapons of any kind onto CLT property.</li>
+                    <li><strong>Photography & Social Media:</strong> I will not take, share, or post inappropriate photos or videos of anyone. Photos and videos during rehearsals or performances require Director permission and consent of those being photographed.</li>
+                    <li><strong>Property Respect:</strong> I will not damage theatre property, including buildings, equipment, props, costumes, and sets. Parents will be held financially liable for any damages caused by their child.</li>
+                    <li><strong>Attendance Commitment:</strong> I agree to attend all designated rehearsals, tech/dress rehearsal week, and performances, except for conflicts I provided at audition.</li>
+                </ul>
+
+                <p style="font-weight: bold; margin-top: 20px; margin-bottom: 10px;">Expectations Adherence & Enforcement</p>
+                <p>Our goal is to maintain a safe, positive environment for all participants. If expectations are not met, we will follow this process:</p>
+                <ol>
+                    <li>Verbal warning from a member of the production team</li>
+                    <li>If necessary, a formal conference with the Director, Producer(s), participant, and parent/guardian</li>
+                    <li>If issues continue, removal from the production</li>
+                </ol>
+
+                <div class="important-note">
+                    <strong>IMPORTANT:</strong> In cases of extreme behavior—including but not limited to physical assault, threats of violence, or intentional property destruction—the participant will be removed immediately from the production and may be prohibited from participating in future CLT productions. If abuse crosses legal boundaries, local authorities will be notified.
+                </div>
+            </div>
+
+            <h3 class="section-title">Parent/Guardian Acknowledgment of Risks</h3>
+            <div class="content-text">
+                <p>As the parent/guardian of the participant named below, I understand that participation in this production involves inherent risks, including those arising from the participant's actions, the actions of others, travel to and from the theatre, and the condition of the facility. I knowingly allow my child to participate and agree to hold harmless The Clemson Little Theatre, its directors, producers, board members, staff, employees, and volunteers from any and all claims for injury or damages. In the event my child requires medical care, I agree to be financially responsible for all costs incurred. The emergency contact information I have provided is the primary point of contact in case of a medical emergency.</p>
+            </div>
+
+            <h3 class="section-title">Participant & Parent/Guardian Signature</h3>
+            <div class="content-text">
+                <p>By signing below, I/we acknowledge that I/we have read, understood, and agree to follow all expectations, procedures, etiquette guidelines, and behavior standards outlined in this agreement. I/we understand that violations may result in disciplinary action, including removal from the current production and/or ineligibility for future CLT productions.</p>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="participantName">PARTICIPANT NAME (PRINTED) <span class="required">*</span></label>
+                    <input type="text" id="participantName" name="Participant Name" required>
                 </div>
 
-                <div class="checkbox-item">
-                    <input type="checkbox" id="agreeMedia" name="Agree to Youth Media Release" value="Yes" required>
-                    <label for="agreeMedia"><strong>I grant permission for CLT to use my child's image and likeness as described in the Youth Media Release <span class="required">*</span></strong></label>
+                <div class="form-group">
+                    <label for="participantDate1">DATE <span class="required">*</span></label>
+                    <input type="date" id="participantDate1" name="Participant Date" required>
                 </div>
             </div>
 
             <div class="signature-section">
-                <h3>Parent/Guardian Signature <span class="required">*</span></h3>
-                <p style="margin-bottom: 15px; color: #666; font-size: 0.9em;">By signing below, I acknowledge that I have read, understood, and agree to comply with all terms of this agreement on behalf of my child.</p>
-                <canvas id="signaturePad" class="signature-pad" width="820" height="200"></canvas>
+                <h3>PARTICIPANT SIGNATURE <span class="required">*</span></h3>
+                <canvas id="signaturePad1" class="signature-pad" width="780" height="150"></canvas>
                 <div class="signature-buttons">
-                    <button type="button" class="btn btn-clear" onclick="clearSignature()">Clear Signature</button>
+                    <button type="button" class="btn btn-clear" onclick="clearSignature1()">Clear Signature</button>
                 </div>
-                <input type="hidden" id="signatureData" name="Parent Signature" required>
+                <input type="hidden" id="signatureData1" name="Participant Signature" required>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="printedName">Parent/Guardian Printed Name <span class="required">*</span></label>
-                    <input type="text" id="printedName" name="Printed Name" required>
+                    <label for="guardianName">PARENT/GUARDIAN NAME (PRINTED) <span class="required">*</span></label>
+                    <input type="text" id="guardianName" name="Parent/Guardian Name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="signatureDate">Date <span class="required">*</span></label>
-                    <input type="date" id="signatureDate" name="Date" required>
+                    <label for="guardianDate1">DATE <span class="required">*</span></label>
+                    <input type="date" id="guardianDate1" name="Parent/Guardian Date" required>
                 </div>
+            </div>
+
+            <div class="signature-section">
+                <h3>PARENT/GUARDIAN SIGNATURE <span class="required">*</span></h3>
+                <canvas id="signaturePad2" class="signature-pad" width="780" height="150"></canvas>
+                <div class="signature-buttons">
+                    <button type="button" class="btn btn-clear" onclick="clearSignature2()">Clear Signature</button>
+                </div>
+                <input type="hidden" id="signatureData2" name="Parent/Guardian Signature" required>
+            </div>
+
+            <h3 class="section-title">Media Release Authorization</h3>
+            <div class="content-text">
+                <p>I give permission for my child to be photographed and/or videotaped for the purpose of advertising and promoting The Clemson Little Theatre and its programs. This includes rights for all visual media including but not limited to: newspapers, local periodicals, websites, social media, and television. I understand that there is no monetary compensation to CLT or my child for the use of these images.</p>
+            </div>
+
+            <div class="signature-section">
+                <h3>PARENT/GUARDIAN SIGNATURE (MEDIA RELEASE) <span class="required">*</span></h3>
+                <canvas id="signaturePad3" class="signature-pad" width="780" height="150"></canvas>
+                <div class="signature-buttons">
+                    <button type="button" class="btn btn-clear" onclick="clearSignature3()">Clear Signature</button>
+                </div>
+                <input type="hidden" id="signatureData3" name="Media Release Signature" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mediaDate">DATE <span class="required">*</span></label>
+                <input type="date" id="mediaDate" name="Media Release Date" required>
+            </div>
+
+            <div class="closing-text">
+                <p><strong>Thank you for being part of The Clemson Little Theatre family!</strong></p>
+                <p>Together, we create magic on stage.</p>
             </div>
 
             <button type="submit" class="btn btn-submit">Submit Youth Agreement</button>
@@ -396,23 +424,22 @@
     </div>
 
     <script>
-        // Signature pad functionality
-        const canvas = document.getElementById('signaturePad');
-        const ctx = canvas.getContext('2d');
-        let isDrawing = false;
-        let lastX = 0;
-        let lastY = 0;
+        // Signature pad 1 functionality (participant)
+        const canvas1 = document.getElementById('signaturePad1');
+        const ctx1 = canvas1.getContext('2d');
+        let isDrawing1 = false;
+        let lastX1 = 0;
+        let lastY1 = 0;
 
-        ctx.strokeStyle = '#000';
-        ctx.lineWidth = 2;
-        ctx.lineCap = 'round';
-        ctx.lineJoin = 'round';
+        ctx1.strokeStyle = '#000';
+        ctx1.lineWidth = 2;
+        ctx1.lineCap = 'round';
+        ctx1.lineJoin = 'round';
 
-        function getCoordinates(e) {
-            const rect = canvas.getBoundingClientRect();
-            const scaleX = canvas.width / rect.width;
-            const scaleY = canvas.height / rect.height;
-
+        function getCoordinates1(e) {
+            const rect = canvas1.getBoundingClientRect();
+            const scaleX = canvas1.width / rect.width;
+            const scaleY = canvas1.height / rect.height;
             if (e.touches) {
                 return {
                     x: (e.touches[0].clientX - rect.left) * scaleX,
@@ -425,69 +452,212 @@
             };
         }
 
-        function startDrawing(e) {
-            isDrawing = true;
-            const coords = getCoordinates(e);
-            [lastX, lastY] = [coords.x, coords.y];
+        function startDrawing1(e) {
+            isDrawing1 = true;
+            const coords = getCoordinates1(e);
+            [lastX1, lastY1] = [coords.x, coords.y];
         }
 
-        function draw(e) {
-            if (!isDrawing) return;
+        function draw1(e) {
+            if (!isDrawing1) return;
             e.preventDefault();
-
-            const coords = getCoordinates(e);
-            ctx.beginPath();
-            ctx.moveTo(lastX, lastY);
-            ctx.lineTo(coords.x, coords.y);
-            ctx.stroke();
-            [lastX, lastY] = [coords.x, coords.y];
+            const coords = getCoordinates1(e);
+            ctx1.beginPath();
+            ctx1.moveTo(lastX1, lastY1);
+            ctx1.lineTo(coords.x, coords.y);
+            ctx1.stroke();
+            [lastX1, lastY1] = [coords.x, coords.y];
         }
 
-        function stopDrawing() {
-            isDrawing = false;
+        function stopDrawing1() {
+            isDrawing1 = false;
         }
 
-        canvas.addEventListener('mousedown', startDrawing);
-        canvas.addEventListener('mousemove', draw);
-        canvas.addEventListener('mouseup', stopDrawing);
-        canvas.addEventListener('mouseout', stopDrawing);
-        canvas.addEventListener('touchstart', startDrawing);
-        canvas.addEventListener('touchmove', draw);
-        canvas.addEventListener('touchend', stopDrawing);
+        canvas1.addEventListener('mousedown', startDrawing1);
+        canvas1.addEventListener('mousemove', draw1);
+        canvas1.addEventListener('mouseup', stopDrawing1);
+        canvas1.addEventListener('mouseout', stopDrawing1);
+        canvas1.addEventListener('touchstart', startDrawing1);
+        canvas1.addEventListener('touchmove', draw1);
+        canvas1.addEventListener('touchend', stopDrawing1);
 
-        function clearSignature() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            document.getElementById('signatureData').value = '';
+        function clearSignature1() {
+            ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+            document.getElementById('signatureData1').value = '';
         }
 
+        // Signature pad 2 functionality (parent/guardian main)
+        const canvas2 = document.getElementById('signaturePad2');
+        const ctx2 = canvas2.getContext('2d');
+        let isDrawing2 = false;
+        let lastX2 = 0;
+        let lastY2 = 0;
+
+        ctx2.strokeStyle = '#000';
+        ctx2.lineWidth = 2;
+        ctx2.lineCap = 'round';
+        ctx2.lineJoin = 'round';
+
+        function getCoordinates2(e) {
+            const rect = canvas2.getBoundingClientRect();
+            const scaleX = canvas2.width / rect.width;
+            const scaleY = canvas2.height / rect.height;
+            if (e.touches) {
+                return {
+                    x: (e.touches[0].clientX - rect.left) * scaleX,
+                    y: (e.touches[0].clientY - rect.top) * scaleY
+                };
+            }
+            return {
+                x: (e.clientX - rect.left) * scaleX,
+                y: (e.clientY - rect.top) * scaleY
+            };
+        }
+
+        function startDrawing2(e) {
+            isDrawing2 = true;
+            const coords = getCoordinates2(e);
+            [lastX2, lastY2] = [coords.x, coords.y];
+        }
+
+        function draw2(e) {
+            if (!isDrawing2) return;
+            e.preventDefault();
+            const coords = getCoordinates2(e);
+            ctx2.beginPath();
+            ctx2.moveTo(lastX2, lastY2);
+            ctx2.lineTo(coords.x, coords.y);
+            ctx2.stroke();
+            [lastX2, lastY2] = [coords.x, coords.y];
+        }
+
+        function stopDrawing2() {
+            isDrawing2 = false;
+        }
+
+        canvas2.addEventListener('mousedown', startDrawing2);
+        canvas2.addEventListener('mousemove', draw2);
+        canvas2.addEventListener('mouseup', stopDrawing2);
+        canvas2.addEventListener('mouseout', stopDrawing2);
+        canvas2.addEventListener('touchstart', startDrawing2);
+        canvas2.addEventListener('touchmove', draw2);
+        canvas2.addEventListener('touchend', stopDrawing2);
+
+        function clearSignature2() {
+            ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+            document.getElementById('signatureData2').value = '';
+        }
+
+        // Signature pad 3 functionality (parent/guardian media release)
+        const canvas3 = document.getElementById('signaturePad3');
+        const ctx3 = canvas3.getContext('2d');
+        let isDrawing3 = false;
+        let lastX3 = 0;
+        let lastY3 = 0;
+
+        ctx3.strokeStyle = '#000';
+        ctx3.lineWidth = 2;
+        ctx3.lineCap = 'round';
+        ctx3.lineJoin = 'round';
+
+        function getCoordinates3(e) {
+            const rect = canvas3.getBoundingClientRect();
+            const scaleX = canvas3.width / rect.width;
+            const scaleY = canvas3.height / rect.height;
+            if (e.touches) {
+                return {
+                    x: (e.touches[0].clientX - rect.left) * scaleX,
+                    y: (e.touches[0].clientY - rect.top) * scaleY
+                };
+            }
+            return {
+                x: (e.clientX - rect.left) * scaleX,
+                y: (e.clientY - rect.top) * scaleY
+            };
+        }
+
+        function startDrawing3(e) {
+            isDrawing3 = true;
+            const coords = getCoordinates3(e);
+            [lastX3, lastY3] = [coords.x, coords.y];
+        }
+
+        function draw3(e) {
+            if (!isDrawing3) return;
+            e.preventDefault();
+            const coords = getCoordinates3(e);
+            ctx3.beginPath();
+            ctx3.moveTo(lastX3, lastY3);
+            ctx3.lineTo(coords.x, coords.y);
+            ctx3.stroke();
+            [lastX3, lastY3] = [coords.x, coords.y];
+        }
+
+        function stopDrawing3() {
+            isDrawing3 = false;
+        }
+
+        canvas3.addEventListener('mousedown', startDrawing3);
+        canvas3.addEventListener('mousemove', draw3);
+        canvas3.addEventListener('mouseup', stopDrawing3);
+        canvas3.addEventListener('mouseout', stopDrawing3);
+        canvas3.addEventListener('touchstart', startDrawing3);
+        canvas3.addEventListener('touchmove', draw3);
+        canvas3.addEventListener('touchend', stopDrawing3);
+
+        function clearSignature3() {
+            ctx3.clearRect(0, 0, canvas3.width, canvas3.height);
+            document.getElementById('signatureData3').value = '';
+        }
+
+        // Form submission
         document.getElementById('agreementForm').addEventListener('submit', function(e) {
-            const signatureData = canvas.toDataURL();
-            const blankCanvas = document.createElement('canvas');
-            blankCanvas.width = canvas.width;
-            blankCanvas.height = canvas.height;
+            // Check participant signature
+            const signatureData1 = canvas1.toDataURL();
+            const blankCanvas1 = document.createElement('canvas');
+            blankCanvas1.width = canvas1.width;
+            blankCanvas1.height = canvas1.height;
 
-            if (signatureData === blankCanvas.toDataURL()) {
+            if (signatureData1 === blankCanvas1.toDataURL()) {
                 e.preventDefault();
-                alert('Please provide your signature before submitting.');
+                alert('Please provide participant signature before submitting.');
                 return false;
             }
 
-            document.getElementById('signatureData').value = signatureData;
+            // Check parent/guardian signature
+            const signatureData2 = canvas2.toDataURL();
+            const blankCanvas2 = document.createElement('canvas');
+            blankCanvas2.width = canvas2.width;
+            blankCanvas2.height = canvas2.height;
+
+            if (signatureData2 === blankCanvas2.toDataURL()) {
+                e.preventDefault();
+                alert('Please provide parent/guardian signature before submitting.');
+                return false;
+            }
+
+            // Check media release signature
+            const signatureData3 = canvas3.toDataURL();
+            const blankCanvas3 = document.createElement('canvas');
+            blankCanvas3.width = canvas3.width;
+            blankCanvas3.height = canvas3.height;
+
+            if (signatureData3 === blankCanvas3.toDataURL()) {
+                e.preventDefault();
+                alert('Please provide parent/guardian signature for media release before submitting.');
+                return false;
+            }
+
+            // Save all signatures
+            document.getElementById('signatureData1').value = signatureData1;
+            document.getElementById('signatureData2').value = signatureData2;
+            document.getElementById('signatureData3').value = signatureData3;
         });
 
-        document.getElementById('signatureDate').valueAsDate = new Date();
-
-        // Auto-fill printed name
-        function updatePrintedName() {
-            const firstName = document.getElementById('parentFirstName').value;
-            const lastName = document.getElementById('parentLastName').value;
-            if (firstName && lastName) {
-                document.getElementById('printedName').value = firstName + ' ' + lastName;
-            }
-        }
-
-        document.getElementById('parentFirstName').addEventListener('blur', updatePrintedName);
-        document.getElementById('parentLastName').addEventListener('blur', updatePrintedName);
+        // Auto-fill today's date
+        document.getElementById('participantDate1').valueAsDate = new Date();
+        document.getElementById('guardianDate1').valueAsDate = new Date();
+        document.getElementById('mediaDate').valueAsDate = new Date();
     </script>
 </body>
 </html>
