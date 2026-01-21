@@ -1,356 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background Check Consent Form - The Miracle Worker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .logo img {
-            max-width: 300px;
-            height: auto;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            color: #000;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .header h2 {
-            color: #000;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #000;
-            font-weight: bold;
-            font-size: 0.95em;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group input[type="tel"],
-        .form-group input[type="date"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-bottom: 2px solid #000;
-            font-size: 1em;
-            background: transparent;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-bottom: 2px solid #667eea;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 2fr 2fr 1fr;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .form-row-3 {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .gender-group {
-            margin: 30px 0;
-        }
-
-        .gender-group label {
-            font-weight: bold;
-            font-size: 0.95em;
-            margin-right: 20px;
-        }
-
-        .gender-options {
-            display: inline-flex;
-            gap: 30px;
-            margin-top: 10px;
-        }
-
-        .gender-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .gender-option input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-        }
-
-        .gender-option label {
-            font-weight: normal;
-            cursor: pointer;
-            margin: 0;
-        }
-
-        .authorization-text {
-            margin: 30px 0;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        .signature-section {
-            margin-top: 40px;
-        }
-
-        .signature-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-            margin-top: 30px;
-        }
-
-        .signature-field {
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
-            min-height: 40px;
-        }
-
-        .signature-label {
-            text-align: center;
-            font-weight: bold;
-            margin-top: 5px;
-            font-size: 0.9em;
-        }
-
         .signature-pad {
-            border: 2px solid #ddd;
-            border-radius: 5px;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
             background: white;
             cursor: crosshair;
             touch-action: none;
             width: 100%;
         }
-
-        .signature-buttons {
-            margin-top: 10px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-clear {
-            background: #ff6b6b;
-            color: white;
-        }
-
-        .btn-clear:hover {
-            background: #ee5555;
-        }
-
-        .btn-submit {
-            background: #667eea;
-            color: white;
-            width: 100%;
-            margin-top: 30px;
-            font-size: 1.1em;
-            font-weight: 600;
-            padding: 15px;
-        }
-
-        .btn-submit:hover {
-            background: #5568d3;
-        }
-
-        .required {
-            color: #ff6b6b;
-        }
-
-        @media (max-width: 768px) {
-            .form-row,
-            .form-row-3,
-            .signature-row {
-                grid-template-columns: 1fr;
-            }
-
-            .container {
-                padding: 30px 20px;
-            }
-        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>THE CLEMSON LITTLE THEATRE</h1>
-            <h2>BACKGROUND CHECK CONSENT FORM</h2>
+<body class="bg-gradient-to-br from-purple-500 to-indigo-600 min-h-screen py-8 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="card bg-base-100 shadow-2xl">
+            <div class="card-body">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-bold text-primary mb-2">THE CLEMSON LITTLE THEATRE</h1>
+                    <h2 class="text-2xl font-semibold">Background Check Consent Form</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <form id="backgroundForm" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Configuration -->
+                    <input type="hidden" name="access_key" value="01c86d57-173b-4ad6-a227-421b6538aed6">
+                    <input type="hidden" name="subject" value="Background Check Consent Form - Miracle Worker">
+                    <input type="hidden" name="redirect" value="https://miracle-worker-forms.pages.dev/thank-you.html">
+                    <input type="hidden" name="from_name" value="Miracle Worker Forms">
+
+                    <!-- Name Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+                        <div class="md:col-span-5">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-semibold">LAST NAME <span class="text-error">*</span></span>
+                                </label>
+                                <input type="text" id="lastName" name="Last Name" class="input input-bordered" required>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-5">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-semibold">FIRST NAME <span class="text-error">*</span></span>
+                                </label>
+                                <input type="text" id="firstName" name="First Name" class="input input-bordered" required>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-semibold">MI</span>
+                                </label>
+                                <input type="text" id="mi" name="MI" class="input input-bordered" maxlength="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-control mb-4">
+                        <label class="label">
+                            <span class="label-text font-semibold">DATE OF BIRTH <span class="text-error">*</span></span>
+                        </label>
+                        <input type="date" id="dob" name="Date of Birth" class="input input-bordered" required>
+                    </div>
+
+                    <!-- Street Address -->
+                    <div class="form-control mb-4">
+                        <label class="label">
+                            <span class="label-text font-semibold">STREET ADDRESS <span class="text-error">*</span></span>
+                        </label>
+                        <input type="text" id="address" name="Street Address" class="input input-bordered" required>
+                    </div>
+
+                    <!-- City, State, ZIP -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+                        <div class="md:col-span-6">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-semibold">CITY <span class="text-error">*</span></span>
+                                </label>
+                                <input type="text" id="city" name="City" class="input input-bordered" required>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-3">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-semibold">STATE <span class="text-error">*</span></span>
+                                </label>
+                                <input type="text" id="state" name="State" value="SC" class="input input-bordered" required maxlength="2">
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-3">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-semibold">ZIP <span class="text-error">*</span></span>
+                                </label>
+                                <input type="text" id="zip" name="ZIP Code" class="input input-bordered" required pattern="[0-9]{5}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-control mb-4">
+                        <label class="label">
+                            <span class="label-text font-semibold">CELL PHONE NUMBER <span class="text-error">*</span></span>
+                        </label>
+                        <input type="tel" id="phone" name="Cell Phone Number" class="input input-bordered" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-control mb-4">
+                        <label class="label">
+                            <span class="label-text font-semibold">EMAIL ADDRESS <span class="text-error">*</span></span>
+                        </label>
+                        <input type="email" id="email" name="Email Address" class="input input-bordered" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-control mb-6">
+                        <label class="label">
+                            <span class="label-text font-semibold">GENDER <span class="text-error">*</span></span>
+                        </label>
+                        <div class="flex gap-6">
+                            <label class="label cursor-pointer gap-2">
+                                <input type="radio" name="Gender" value="Male" class="radio radio-primary" required>
+                                <span class="label-text">Male</span>
+                            </label>
+                            <label class="label cursor-pointer gap-2">
+                                <input type="radio" name="Gender" value="Female" class="radio radio-primary" required>
+                                <span class="label-text">Female</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Authorization Text -->
+                    <div class="alert alert-info mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div>
+                            <p class="text-sm leading-relaxed">I authorize The Clemson Little Theatre to conduct a complete criminal history check as a basis of my placement as an employee, volunteer, cast or crew member with the organization. I understand that I am to report any changes in my criminal history to The Clemson Little Theatre.</p>
+                        </div>
+                    </div>
+
+                    <!-- Signature Section -->
+                    <div class="divider">SIGNATURE</div>
+                    <div class="mb-4">
+                        <label class="label">
+                            <span class="label-text font-semibold">Please sign below <span class="text-error">*</span></span>
+                        </label>
+                        <canvas id="signaturePad" class="signature-pad" width="700" height="150"></canvas>
+                        <div class="mt-2">
+                            <button type="button" class="btn btn-error btn-sm" onclick="clearSignature()">Clear Signature</button>
+                        </div>
+                        <input type="hidden" id="signatureData" name="Signature" required>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="form-control mb-6">
+                        <label class="label">
+                            <span class="label-text font-semibold">DATE <span class="text-error">*</span></span>
+                        </label>
+                        <input type="date" id="signatureDate" name="Date" class="input input-bordered" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-lg w-full">Submit Background Check Consent Form</button>
+                </form>
+            </div>
         </div>
-
-        <form id="backgroundForm" action="https://api.web3forms.com/submit" method="POST">
-            <!-- Web3Forms Configuration -->
-            <input type="hidden" name="access_key" value="01c86d57-173b-4ad6-a227-421b6538aed6">
-            <input type="hidden" name="subject" value="Background Check Consent Form - Miracle Worker">
-            <input type="hidden" name="redirect" value="https://miracle-worker-forms.pages.dev/thank-you.html">
-            <input type="hidden" name="from_name" value="Miracle Worker Forms">
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="lastName">LAST NAME <span class="required">*</span></label>
-                    <input type="text" id="lastName" name="Last Name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="firstName">FIRST NAME <span class="required">*</span></label>
-                    <input type="text" id="firstName" name="First Name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="mi">MI</label>
-                    <input type="text" id="mi" name="MI" maxlength="1">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="dob">DATE OF BIRTH <span class="required">*</span></label>
-                <input type="date" id="dob" name="Date of Birth" required>
-            </div>
-
-            <div class="form-group">
-                <label for="address">STREET ADDRESS <span class="required">*</span></label>
-                <input type="text" id="address" name="Street Address" required>
-            </div>
-
-            <div class="form-row-3">
-                <div class="form-group">
-                    <label for="city">CITY <span class="required">*</span></label>
-                    <input type="text" id="city" name="City" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="state">STATE <span class="required">*</span></label>
-                    <input type="text" id="state" name="State" value="SC" required maxlength="2">
-                </div>
-
-                <div class="form-group">
-                    <label for="zip">ZIP <span class="required">*</span></label>
-                    <input type="text" id="zip" name="ZIP Code" required pattern="[0-9]{5}">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">CELL PHONE NUMBER <span class="required">*</span></label>
-                <input type="tel" id="phone" name="Cell Phone Number" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">EMAIL ADDRESS <span class="required">*</span></label>
-                <input type="email" id="email" name="Email Address" required>
-            </div>
-
-            <div class="gender-group">
-                <label>GENDER: <span class="required">*</span></label>
-                <div class="gender-options">
-                    <div class="gender-option">
-                        <input type="checkbox" id="genderMale" name="Gender" value="Male" onchange="handleGenderChange(this)">
-                        <label for="genderMale">Male</label>
-                    </div>
-                    <div class="gender-option">
-                        <input type="checkbox" id="genderFemale" name="Gender" value="Female" onchange="handleGenderChange(this)">
-                        <label for="genderFemale">Female</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="authorization-text">
-                <p>I authorize The Clemson Little Theatre to conduct a complete criminal history check as a basis of my placement as an employee, volunteer, cast or crew member with the organization. I understand that I am to report any changes in my criminal history to The Clemson Little Theatre.</p>
-            </div>
-
-            <div class="signature-section">
-                <canvas id="signaturePad" class="signature-pad" width="700" height="150"></canvas>
-                <div class="signature-buttons">
-                    <button type="button" class="btn btn-clear" onclick="clearSignature()">Clear Signature</button>
-                </div>
-                <input type="hidden" id="signatureData" name="Signature" required>
-
-                <div class="signature-row">
-                    <div>
-                        <div class="signature-field"></div>
-                        <div class="signature-label">SIGNED BY</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="signatureDate">DATE <span class="required">*</span></label>
-                        <input type="date" id="signatureDate" name="Date" required>
-                    </div>
-                </div>
-            </div>
-
-            <button type="submit" class="btn btn-submit">Submit Background Check Consent Form</button>
-        </form>
     </div>
 
     <script>
-        // Gender checkbox handling
-        function handleGenderChange(checkbox) {
-            const male = document.getElementById('genderMale');
-            const female = document.getElementById('genderFemale');
-
-            if (checkbox.checked) {
-                if (checkbox.id === 'genderMale') {
-                    female.checked = false;
-                } else {
-                    male.checked = false;
-                }
-            }
-        }
-
         // Signature pad functionality
         const canvas = document.getElementById('signaturePad');
         const ctx = canvas.getContext('2d');
@@ -416,16 +246,6 @@
         }
 
         document.getElementById('backgroundForm').addEventListener('submit', function(e) {
-            // Check gender selection
-            const maleChecked = document.getElementById('genderMale').checked;
-            const femaleChecked = document.getElementById('genderFemale').checked;
-
-            if (!maleChecked && !femaleChecked) {
-                e.preventDefault();
-                alert('Please select your gender.');
-                return false;
-            }
-
             // Check signature
             const signatureData = canvas.toDataURL();
             const blankCanvas = document.createElement('canvas');

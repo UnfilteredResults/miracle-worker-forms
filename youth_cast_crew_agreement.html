@@ -1,426 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youth Cast/Crew Agreement - The Miracle Worker</title>
+
+    <!-- Tailwind CSS and DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            color: #8B0000;
-            font-size: 1.8em;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .header h2 {
-            color: #000;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .production-info {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-            border: 2px solid #000;
-        }
-
-        .production-info td {
-            padding: 10px;
-            border: 1px solid #000;
-        }
-
-        .production-info td:first-child {
-            font-weight: bold;
-            width: 40%;
-            background: #e0e0e0;
-        }
-
-        .section-title {
-            color: #8B0000;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .content-text {
-            line-height: 1.8;
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        .content-text ul {
-            margin-left: 30px;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
-
-        .content-text li {
-            margin-bottom: 12px;
-            line-height: 1.8;
-        }
-
-        .content-text ol {
-            margin-left: 30px;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
-
-        .content-text ol li {
-            margin-bottom: 10px;
-        }
-
-        .content-text strong {
-            font-weight: bold;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #000;
-            font-weight: bold;
-            font-size: 0.95em;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-bottom: 2px solid #000;
-            font-size: 1em;
-            background: transparent;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-bottom: 2px solid #667eea;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .signature-section {
-            margin-top: 30px;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 5px;
-            border: 2px solid #000;
-        }
-
-        .signature-section h3 {
-            margin-bottom: 15px;
-            color: #000;
-            font-weight: bold;
-        }
-
         .signature-pad {
-            border: 2px solid #ddd;
-            border-radius: 5px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
             background: white;
             cursor: crosshair;
             touch-action: none;
-            margin-bottom: 10px;
-        }
-
-        .signature-buttons {
-            margin-bottom: 15px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-clear {
-            background: #ff6b6b;
-            color: white;
-        }
-
-        .btn-clear:hover {
-            background: #ee5555;
-        }
-
-        .btn-submit {
-            background: #667eea;
-            color: white;
             width: 100%;
-            margin-top: 20px;
-            font-size: 1.1em;
-            font-weight: 600;
-            padding: 15px;
+            height: 150px;
         }
 
-        .btn-submit:hover {
-            background: #5568d3;
-        }
-
-        .required {
-            color: #ff6b6b;
-        }
-
-        .important-note {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            font-weight: bold;
-        }
-
-        .closing-text {
-            text-align: center;
-            font-style: italic;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-        }
-
-        @media (max-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .container {
-                padding: 30px 20px;
-            }
+        body {
+            background: linear-gradient(to bottom right, rgb(168, 85, 247), rgb(79, 70, 229));
+            min-height: 100vh;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>THE CLEMSON LITTLE THEATRE</h1>
-            <h2>Youth Cast & Crew Member Agreement</h2>
+<body class="bg-gradient-to-br from-purple-500 to-indigo-600 p-4 md:p-8">
+    <div class="max-w-5xl mx-auto">
+        <div class="card bg-base-100 shadow-2xl">
+            <div class="card-body p-6 md:p-12">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl md:text-4xl font-bold text-error mb-3">THE CLEMSON LITTLE THEATRE</h1>
+                    <h2 class="text-xl md:text-2xl font-bold text-base-content">Youth Cast & Crew Member Agreement</h2>
+                </div>
+
+                <form id="agreementForm" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Configuration -->
+                    <input type="hidden" name="access_key" value="01c86d57-173b-4ad6-a227-421b6538aed6">
+                    <input type="hidden" name="subject" value="Youth Cast/Crew Agreement - Miracle Worker">
+                    <input type="hidden" name="redirect" value="https://miracle-worker-forms.pages.dev/thank-you.html">
+                    <input type="hidden" name="from_name" value="Miracle Worker Forms">
+
+                    <!-- Production Information -->
+                    <h3 class="text-lg font-bold mb-4">Production Information & Key Contacts</h3>
+
+                    <div class="overflow-x-auto mb-6">
+                        <table class="table table-zebra w-full border-2 border-base-300">
+                            <tbody>
+                                <tr>
+                                    <td class="font-bold bg-base-200">Production Title:</td>
+                                    <td>The Miracle Worker</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-bold bg-base-200">Performance Dates:</td>
+                                    <td>Jan 30-Feb 8 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-bold bg-base-200">Director:</td>
+                                    <td>Phillip Rast</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-bold bg-base-200">Producer:</td>
+                                    <td>Mike Shipley & Ireland Pfeiffer</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-bold bg-base-200">Tech/Dress Rehearsals:</td>
+                                    <td>1/22/26-1/29/26</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="divider divider-error"></div>
+
+                    <!-- Our Mission -->
+                    <h3 class="text-lg font-bold text-error uppercase mb-4">Our Mission</h3>
+                    <div class="prose max-w-none mb-6">
+                        <p class="text-justify leading-relaxed">The Clemson Little Theatre fosters an inclusive and vibrant theatre community through diverse, high-quality theatrical productions that inspire creativity, connection, and dialogue. We are committed to providing a supportive and safe environment where every participant—onstage, backstage, and in the audience—feels valued and included.</p>
+                    </div>
+
+                    <div class="divider divider-error"></div>
+
+                    <!-- Welcome -->
+                    <h3 class="text-lg font-bold text-error uppercase mb-4">Welcome</h3>
+                    <div class="prose max-w-none mb-6">
+                        <p class="text-justify leading-relaxed">Congratulations on being part of this production with The Clemson Little Theatre! We are thrilled to have you. Theatre is a collaborative art form built on trust, respect, and dedication from everyone involved. This agreement outlines our expectations and procedures to ensure we create a safe, positive, and successful experience for all participants. Please read through this document carefully with your parent or guardian.</p>
+                    </div>
+
+                    <div class="divider divider-error"></div>
+
+                    <!-- Cast & Crew Expectations -->
+                    <h3 class="text-lg font-bold text-error uppercase mb-4">Cast & Crew Expectations</h3>
+                    <div class="prose max-w-none mb-6">
+                        <ul class="space-y-3">
+                            <li><strong>Be Prompt:</strong> Arrive at rehearsal at or before the designated start time. Being on time shows respect for everyone's commitment to the production.</li>
+                            <li><strong>Be Prepared:</strong> Bring your script, pencil, and water bottle to every rehearsal. Wear comfortable clothes and shoes appropriate for movement. If it's appropriate for school, it's appropriate for theatre.</li>
+                            <li><strong>Be Present:</strong> Give your full attention during rehearsals. While we want you to have fun, we also want to create an excellent show, which requires focus and dedication from everyone.</li>
+                            <li><strong>Be Respectful:</strong> Treat everyone in the theatre with courtesy and respect. Pay attention during rehearsals and avoid distracting others. Respect the property, personal space, and opinions of all cast, crew, and volunteers.</li>
+                            <li><strong>Be Considerate:</strong> Think about how your words and actions affect others. We're all working together to create something special.</li>
+                            <li><strong>Embrace Inclusivity:</strong> CLT celebrates diversity and does not tolerate discrimination or harassment based on race, ethnicity, gender identity, sexual orientation, age, religion, or disability. Cyberbullying is also prohibited.</li>
+                            <li><strong>Foster Collaboration:</strong> Community theatre is a team effort. Support your fellow cast and crew members, and appreciate the hard work everyone contributes.</li>
+                        </ul>
+                    </div>
+
+                    <div class="divider divider-error"></div>
+
+                    <!-- Rehearsal Procedures -->
+                    <h3 class="text-lg font-bold text-error uppercase mb-4">Rehearsal Procedures</h3>
+                    <div class="prose max-w-none mb-6">
+                        <ul class="space-y-3">
+                            <li><strong>Attendance & Sign-In:</strong> You must sign in at every rehearsal. Your presence is essential to the success of the production. All conflicts should be submitted at auditions. If an emergency conflict arises, contact the Producer, Director, or Stage Manager immediately.</li>
+                            <li><strong>Memorization (Off-Book):</strong> The Director will announce when lines must be memorized. Practice your lines, blocking, songs, and choreography both inside and outside of rehearsal. If you need help with memorization, please ask the Director for guidance.</li>
+                            <li><strong>Theatre Move-In:</strong> When we transition from the rehearsal space to the theatre, enter through the designated side door. Sign in at the front of the theatre and take a seat as close to the stage as possible.</li>
+                            <li><strong>Transportation & Pick-Up:</strong> Youth participants who cannot drive themselves must be signed out by a parent or guardian after each rehearsal. Parents must inform CLT staff in writing (via Remind app, text, or email) if their child will be driving themselves or if someone other than a parent/guardian will be picking them up. Advance written permission is required for any transportation changes.</li>
+                            <li><strong>Missed Rehearsals:</strong> Please make every effort to attend all rehearsals you are called to. Missing an unexcused rehearsal affects the entire cast and crew, regardless of your role size. We understand emergencies happen—just communicate with the production team as soon as possible.</li>
+                        </ul>
+                    </div>
+
+                    <div class="divider divider-error"></div>
+
+                    <!-- Theatre Etiquette & Safety Guidelines -->
+                    <h3 class="text-lg font-bold text-error uppercase mb-4">Theatre Etiquette & Safety Guidelines</h3>
+                    <div class="prose max-w-none mb-6">
+                        <p class="leading-relaxed mb-4">These guidelines help us maintain a safe, professional environment and protect our historic theatre building:</p>
+                        <ul class="space-y-3">
+                            <li><strong>Respect Our Space:</strong> Always leave the theatre cleaner than you found it. Clean up any drinks, food, or personal items. Our building is historic and needs everyone's care. No food is allowed on stage or backstage—only water in bottles or cups with secure lids is permitted backstage.</li>
+                            <li><strong>Props Are Sacred:</strong> Never touch, move, or borrow another person's props, even if you think they should be somewhere else. Each prop is carefully placed for the show. If something seems misplaced, please alert the Stage Manager.</li>
+                            <li><strong>Quiet Backstage:</strong> Maintain silence backstage and in the green room during rehearsals and performances. Voices and footsteps carry onto the stage and into the audience. No shushing—it's often louder than talking! Your quiet allows everyone to hear cues and maintain the magic of the performance.</li>
+                            <li><strong>Cell Phones:</strong> Cell phones should never be brought on stage, even in pockets, where they could be a distraction. Please keep cell phones with your stuff. During tech rehearsals and performances, cell phones, tablets, and electronic devices must remain in the green room and are not permitted backstage or on stage at any time. A ringing phone can disrupt the entire show.</li>
+                            <li><strong>Costume Care:</strong> Many of our costumes are vintage or one-of-a-kind. Treat them with care and always hang them neatly on hangers. All costume pieces must be on hangers or designated shelves in the green room—never left on the floor.</li>
+                            <li><strong>Tech Booth:</strong> The tech booth is reserved for sound, lighting, and projection operators only. Actors and stage crew should not enter the tech booth.</li>
+                            <li><strong>Backstage Areas:</strong> Youth participants must inform the production team of their whereabouts at all times. You may not leave the building, enter the lobby restroom, or go outside without permission from the production team.</li>
+                            <li><strong>Auditorium Behavior:</strong> When not rehearsing, please sit quietly near the front of the auditorium. No running, roughhousing, or jumping off the stage—ever. These actions can cause serious injury and damage our historic stage.</li>
+                        </ul>
+                    </div>
+
+                    <div class="divider divider-error"></div>
+
+                    <!-- Behavior Standards & Legal Expectations -->
+                    <h3 class="text-lg font-bold text-error uppercase mb-4">Behavior Standards & Legal Expectations</h3>
+                    <div class="prose max-w-none mb-6">
+                        <p class="leading-relaxed mb-4">CLT is committed to creating a safe, inclusive environment where everyone feels welcomed and valued. The following standards are mandatory for all participants:</p>
+                        <p class="font-bold mb-3">I/my child pledge(s) to uphold the following standards:</p>
+                        <ul class="space-y-3">
+                            <li><strong>Respect for All:</strong> I will treat all cast members, production team, and volunteers with respect. Physical, verbal, or cyber abuse of any kind will not be tolerated.</li>
+                            <li><strong>Appropriate Language:</strong> I will not use inappropriate, offensive, or threatening language in the theatre or on theatre property.</li>
+                            <li><strong>Prohibited Items:</strong> I will not bring drugs, alcohol, tobacco, vaping devices, firearms, or weapons of any kind onto CLT property.</li>
+                            <li><strong>Photography & Social Media:</strong> I will not take, share, or post inappropriate photos or videos of anyone. Photos and videos during rehearsals or performances require Director permission and consent of those being photographed.</li>
+                            <li><strong>Property Respect:</strong> I will not damage theatre property, including buildings, equipment, props, costumes, and sets. Parents will be held financially liable for any damages caused by their child.</li>
+                            <li><strong>Attendance Commitment:</strong> I agree to attend all designated rehearsals, tech/dress rehearsal week, and performances, except for conflicts I provided at audition.</li>
+                        </ul>
+
+                        <p class="font-bold mt-6 mb-3">Expectations Adherence & Enforcement</p>
+                        <p class="leading-relaxed mb-3">Our goal is to maintain a safe, positive environment for all participants. If expectations are not met, we will follow this process:</p>
+                        <ol class="space-y-2">
+                            <li>Verbal warning from a member of the production team</li>
+                            <li>If necessary, a formal conference with the Director, Producer(s), participant, and parent/guardian</li>
+                            <li>If issues continue, removal from the production</li>
+                        </ol>
+
+                        <div class="alert alert-warning shadow-lg mt-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                            <div>
+                                <strong>IMPORTANT:</strong> In cases of extreme behavior—including but not limited to physical assault, threats of violence, or intentional property destruction—the participant will be removed immediately from the production and may be prohibited from participating in future CLT productions. If abuse crosses legal boundaries, local authorities will be notified.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider divider-error"></div>
+
+                    <!-- Parent/Guardian Acknowledgment of Risks -->
+                    <h3 class="text-lg font-bold text-error uppercase mb-4">Parent/Guardian Acknowledgment of Risks</h3>
+                    <div class="prose max-w-none mb-6">
+                        <p class="text-justify leading-relaxed">As the parent/guardian of the participant named below, I understand that participation in this production involves inherent risks, including those arising from the participant's actions, the actions of others, travel to and from the theatre, and the condition of the facility. I knowingly allow my child to participate and agree to hold harmless The Clemson Little Theatre, its directors, producers, board members, staff, employees, and volunteers from any and all claims for injury or damages. In the event my child requires medical care, I agree to be financially responsible for all costs incurred. The emergency contact information I have provided is the primary point of contact in case of a medical emergency.</p>
+                    </div>
+
+                    <div class="divider divider-error"></div>
+
+                    <!-- Participant & Parent/Guardian Signature -->
+                    <h3 class="text-lg font-bold text-error uppercase mb-4">Participant & Parent/Guardian Signature</h3>
+                    <div class="prose max-w-none mb-6">
+                        <p class="leading-relaxed">By signing below, I/we acknowledge that I/we have read, understood, and agree to follow all expectations, procedures, etiquette guidelines, and behavior standards outlined in this agreement. I/we understand that violations may result in disciplinary action, including removal from the current production and/or ineligibility for future CLT productions.</p>
+                    </div>
+
+                    <!-- Participant Name and Date -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="form-control md:col-span-2">
+                            <label class="label">
+                                <span class="label-text font-bold">PARTICIPANT NAME (PRINTED) <span class="text-error">*</span></span>
+                            </label>
+                            <input type="text" id="participantName" name="Participant Name" class="input input-bordered w-full" required>
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold">DATE <span class="text-error">*</span></span>
+                            </label>
+                            <input type="date" id="participantDate1" name="Participant Date" class="input input-bordered w-full" required>
+                        </div>
+                    </div>
+
+                    <!-- Participant Signature -->
+                    <div class="card bg-base-200 shadow-md mb-6">
+                        <div class="card-body">
+                            <h4 class="card-title text-base">PARTICIPANT SIGNATURE <span class="text-error">*</span></h4>
+                            <canvas id="signaturePad1" class="signature-pad"></canvas>
+                            <div class="card-actions justify-start mt-2">
+                                <button type="button" class="btn btn-error btn-sm" onclick="clearSignature1()">Clear Signature</button>
+                            </div>
+                            <input type="hidden" id="signatureData1" name="Participant Signature" required>
+                        </div>
+                    </div>
+
+                    <!-- Parent/Guardian Name and Date -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="form-control md:col-span-2">
+                            <label class="label">
+                                <span class="label-text font-bold">PARENT/GUARDIAN NAME (PRINTED) <span class="text-error">*</span></span>
+                            </label>
+                            <input type="text" id="guardianName" name="Parent/Guardian Name" class="input input-bordered w-full" required>
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold">DATE <span class="text-error">*</span></span>
+                            </label>
+                            <input type="date" id="guardianDate1" name="Parent/Guardian Date" class="input input-bordered w-full" required>
+                        </div>
+                    </div>
+
+                    <!-- Parent/Guardian Signature -->
+                    <div class="card bg-base-200 shadow-md mb-6">
+                        <div class="card-body">
+                            <h4 class="card-title text-base">PARENT/GUARDIAN SIGNATURE <span class="text-error">*</span></h4>
+                            <canvas id="signaturePad2" class="signature-pad"></canvas>
+                            <div class="card-actions justify-start mt-2">
+                                <button type="button" class="btn btn-error btn-sm" onclick="clearSignature2()">Clear Signature</button>
+                            </div>
+                            <input type="hidden" id="signatureData2" name="Parent/Guardian Signature" required>
+                        </div>
+                    </div>
+
+                    <div class="divider divider-error"></div>
+
+                    <!-- Media Release Authorization -->
+                    <h3 class="text-lg font-bold text-error uppercase mb-4">Media Release Authorization</h3>
+                    <div class="prose max-w-none mb-6">
+                        <p class="leading-relaxed">I give permission for my child to be photographed and/or videotaped for the purpose of advertising and promoting The Clemson Little Theatre and its programs. This includes rights for all visual media including but not limited to: newspapers, local periodicals, websites, social media, and television. I understand that there is no monetary compensation to CLT or my child for the use of these images.</p>
+                    </div>
+
+                    <!-- Parent/Guardian Media Release Signature -->
+                    <div class="card bg-base-200 shadow-md mb-6">
+                        <div class="card-body">
+                            <h4 class="card-title text-base">PARENT/GUARDIAN SIGNATURE (MEDIA RELEASE) <span class="text-error">*</span></h4>
+                            <canvas id="signaturePad3" class="signature-pad"></canvas>
+                            <div class="card-actions justify-start mt-2">
+                                <button type="button" class="btn btn-error btn-sm" onclick="clearSignature3()">Clear Signature</button>
+                            </div>
+                            <input type="hidden" id="signatureData3" name="Media Release Signature" required>
+                        </div>
+                    </div>
+
+                    <!-- Media Release Date -->
+                    <div class="form-control max-w-xs mb-8">
+                        <label class="label">
+                            <span class="label-text font-bold">DATE <span class="text-error">*</span></span>
+                        </label>
+                        <input type="date" id="mediaDate" name="Media Release Date" class="input input-bordered w-full" required>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <!-- Closing Text -->
+                    <div class="text-center my-8">
+                        <p class="text-lg font-bold mb-2">Thank you for being part of The Clemson Little Theatre family!</p>
+                        <p class="text-base italic">Together, we create magic on stage.</p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-lg w-full text-lg">Submit Youth Agreement</button>
+                </form>
+            </div>
         </div>
-
-        <form id="agreementForm" action="https://api.web3forms.com/submit" method="POST">
-            <!-- Web3Forms Configuration -->
-            <input type="hidden" name="access_key" value="01c86d57-173b-4ad6-a227-421b6538aed6">
-            <input type="hidden" name="subject" value="Youth Cast/Crew Agreement - Miracle Worker">
-            <input type="hidden" name="redirect" value="https://miracle-worker-forms.pages.dev/thank-you.html">
-            <input type="hidden" name="from_name" value="Miracle Worker Forms">
-
-            <h3 style="font-weight: bold; margin-bottom: 15px;">Production Information & Key Contacts</h3>
-
-            <table class="production-info">
-                <tr>
-                    <td>Production Title:</td>
-                    <td>The Miracle Worker</td>
-                </tr>
-                <tr>
-                    <td>Performance Dates:</td>
-                    <td>Jan 30-Feb 8 2026</td>
-                </tr>
-                <tr>
-                    <td>Director:</td>
-                    <td>Phillip Rast</td>
-                </tr>
-                <tr>
-                    <td>Producer:</td>
-                    <td>Mike Shipley & Ireland Pfeiffer</td>
-                </tr>
-                <tr>
-                    <td>Tech/Dress Rehearsals:</td>
-                    <td>1/22/26-1/29/26</td>
-                </tr>
-            </table>
-
-            <h3 class="section-title">Our Mission</h3>
-            <div class="content-text">
-                <p>The Clemson Little Theatre fosters an inclusive and vibrant theatre community through diverse, high-quality theatrical productions that inspire creativity, connection, and dialogue. We are committed to providing a supportive and safe environment where every participant—onstage, backstage, and in the audience—feels valued and included.</p>
-            </div>
-
-            <h3 class="section-title">Welcome</h3>
-            <div class="content-text">
-                <p>Congratulations on being part of this production with The Clemson Little Theatre! We are thrilled to have you. Theatre is a collaborative art form built on trust, respect, and dedication from everyone involved. This agreement outlines our expectations and procedures to ensure we create a safe, positive, and successful experience for all participants. Please read through this document carefully with your parent or guardian.</p>
-            </div>
-
-            <h3 class="section-title">Cast & Crew Expectations</h3>
-            <div class="content-text">
-                <ul>
-                    <li><strong>Be Prompt:</strong> Arrive at rehearsal at or before the designated start time. Being on time shows respect for everyone's commitment to the production.</li>
-                    <li><strong>Be Prepared:</strong> Bring your script, pencil, and water bottle to every rehearsal. Wear comfortable clothes and shoes appropriate for movement. If it's appropriate for school, it's appropriate for theatre.</li>
-                    <li><strong>Be Present:</strong> Give your full attention during rehearsals. While we want you to have fun, we also want to create an excellent show, which requires focus and dedication from everyone.</li>
-                    <li><strong>Be Respectful:</strong> Treat everyone in the theatre with courtesy and respect. Pay attention during rehearsals and avoid distracting others. Respect the property, personal space, and opinions of all cast, crew, and volunteers.</li>
-                    <li><strong>Be Considerate:</strong> Think about how your words and actions affect others. We're all working together to create something special.</li>
-                    <li><strong>Embrace Inclusivity:</strong> CLT celebrates diversity and does not tolerate discrimination or harassment based on race, ethnicity, gender identity, sexual orientation, age, religion, or disability. Cyberbullying is also prohibited.</li>
-                    <li><strong>Foster Collaboration:</strong> Community theatre is a team effort. Support your fellow cast and crew members, and appreciate the hard work everyone contributes.</li>
-                </ul>
-            </div>
-
-            <h3 class="section-title">Rehearsal Procedures</h3>
-            <div class="content-text">
-                <ul>
-                    <li><strong>Attendance & Sign-In:</strong> You must sign in at every rehearsal. Your presence is essential to the success of the production. All conflicts should be submitted at auditions. If an emergency conflict arises, contact the Producer, Director, or Stage Manager immediately.</li>
-                    <li><strong>Memorization (Off-Book):</strong> The Director will announce when lines must be memorized. Practice your lines, blocking, songs, and choreography both inside and outside of rehearsal. If you need help with memorization, please ask the Director for guidance.</li>
-                    <li><strong>Theatre Move-In:</strong> When we transition from the rehearsal space to the theatre, enter through the designated side door. Sign in at the front of the theatre and take a seat as close to the stage as possible.</li>
-                    <li><strong>Transportation & Pick-Up:</strong> Youth participants who cannot drive themselves must be signed out by a parent or guardian after each rehearsal. Parents must inform CLT staff in writing (via Remind app, text, or email) if their child will be driving themselves or if someone other than a parent/guardian will be picking them up. Advance written permission is required for any transportation changes.</li>
-                    <li><strong>Missed Rehearsals:</strong> Please make every effort to attend all rehearsals you are called to. Missing an unexcused rehearsal affects the entire cast and crew, regardless of your role size. We understand emergencies happen—just communicate with the production team as soon as possible.</li>
-                </ul>
-            </div>
-
-            <h3 class="section-title">Theatre Etiquette & Safety Guidelines</h3>
-            <div class="content-text">
-                <p>These guidelines help us maintain a safe, professional environment and protect our historic theatre building:</p>
-                <ul>
-                    <li><strong>Respect Our Space:</strong> Always leave the theatre cleaner than you found it. Clean up any drinks, food, or personal items. Our building is historic and needs everyone's care. No food is allowed on stage or backstage—only water in bottles or cups with secure lids is permitted backstage.</li>
-                    <li><strong>Props Are Sacred:</strong> Never touch, move, or borrow another person's props, even if you think they should be somewhere else. Each prop is carefully placed for the show. If something seems misplaced, please alert the Stage Manager.</li>
-                    <li><strong>Quiet Backstage:</strong> Maintain silence backstage and in the green room during rehearsals and performances. Voices and footsteps carry onto the stage and into the audience. No shushing—it's often louder than talking! Your quiet allows everyone to hear cues and maintain the magic of the performance.</li>
-                    <li><strong>Cell Phones:</strong> Cell phones should never be brought on stage, even in pockets, where they could be a distraction. Please keep cell phones with your stuff. During tech rehearsals and performances, cell phones, tablets, and electronic devices must remain in the green room and are not permitted backstage or on stage at any time. A ringing phone can disrupt the entire show.</li>
-                    <li><strong>Costume Care:</strong> Many of our costumes are vintage or one-of-a-kind. Treat them with care and always hang them neatly on hangers. All costume pieces must be on hangers or designated shelves in the green room—never left on the floor.</li>
-                    <li><strong>Tech Booth:</strong> The tech booth is reserved for sound, lighting, and projection operators only. Actors and stage crew should not enter the tech booth.</li>
-                    <li><strong>Backstage Areas:</strong> Youth participants must inform the production team of their whereabouts at all times. You may not leave the building, enter the lobby restroom, or go outside without permission from the production team.</li>
-                    <li><strong>Auditorium Behavior:</strong> When not rehearsing, please sit quietly near the front of the auditorium. No running, roughhousing, or jumping off the stage—ever. These actions can cause serious injury and damage our historic stage.</li>
-                </ul>
-            </div>
-
-            <h3 class="section-title">Behavior Standards & Legal Expectations</h3>
-            <div class="content-text">
-                <p>CLT is committed to creating a safe, inclusive environment where everyone feels welcomed and valued. The following standards are mandatory for all participants:</p>
-                <p><strong>I/my child pledge(s) to uphold the following standards:</strong></p>
-                <ul>
-                    <li><strong>Respect for All:</strong> I will treat all cast members, production team, and volunteers with respect. Physical, verbal, or cyber abuse of any kind will not be tolerated.</li>
-                    <li><strong>Appropriate Language:</strong> I will not use inappropriate, offensive, or threatening language in the theatre or on theatre property.</li>
-                    <li><strong>Prohibited Items:</strong> I will not bring drugs, alcohol, tobacco, vaping devices, firearms, or weapons of any kind onto CLT property.</li>
-                    <li><strong>Photography & Social Media:</strong> I will not take, share, or post inappropriate photos or videos of anyone. Photos and videos during rehearsals or performances require Director permission and consent of those being photographed.</li>
-                    <li><strong>Property Respect:</strong> I will not damage theatre property, including buildings, equipment, props, costumes, and sets. Parents will be held financially liable for any damages caused by their child.</li>
-                    <li><strong>Attendance Commitment:</strong> I agree to attend all designated rehearsals, tech/dress rehearsal week, and performances, except for conflicts I provided at audition.</li>
-                </ul>
-
-                <p style="font-weight: bold; margin-top: 20px; margin-bottom: 10px;">Expectations Adherence & Enforcement</p>
-                <p>Our goal is to maintain a safe, positive environment for all participants. If expectations are not met, we will follow this process:</p>
-                <ol>
-                    <li>Verbal warning from a member of the production team</li>
-                    <li>If necessary, a formal conference with the Director, Producer(s), participant, and parent/guardian</li>
-                    <li>If issues continue, removal from the production</li>
-                </ol>
-
-                <div class="important-note">
-                    <strong>IMPORTANT:</strong> In cases of extreme behavior—including but not limited to physical assault, threats of violence, or intentional property destruction—the participant will be removed immediately from the production and may be prohibited from participating in future CLT productions. If abuse crosses legal boundaries, local authorities will be notified.
-                </div>
-            </div>
-
-            <h3 class="section-title">Parent/Guardian Acknowledgment of Risks</h3>
-            <div class="content-text">
-                <p>As the parent/guardian of the participant named below, I understand that participation in this production involves inherent risks, including those arising from the participant's actions, the actions of others, travel to and from the theatre, and the condition of the facility. I knowingly allow my child to participate and agree to hold harmless The Clemson Little Theatre, its directors, producers, board members, staff, employees, and volunteers from any and all claims for injury or damages. In the event my child requires medical care, I agree to be financially responsible for all costs incurred. The emergency contact information I have provided is the primary point of contact in case of a medical emergency.</p>
-            </div>
-
-            <h3 class="section-title">Participant & Parent/Guardian Signature</h3>
-            <div class="content-text">
-                <p>By signing below, I/we acknowledge that I/we have read, understood, and agree to follow all expectations, procedures, etiquette guidelines, and behavior standards outlined in this agreement. I/we understand that violations may result in disciplinary action, including removal from the current production and/or ineligibility for future CLT productions.</p>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="participantName">PARTICIPANT NAME (PRINTED) <span class="required">*</span></label>
-                    <input type="text" id="participantName" name="Participant Name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="participantDate1">DATE <span class="required">*</span></label>
-                    <input type="date" id="participantDate1" name="Participant Date" required>
-                </div>
-            </div>
-
-            <div class="signature-section">
-                <h3>PARTICIPANT SIGNATURE <span class="required">*</span></h3>
-                <canvas id="signaturePad1" class="signature-pad" width="700" height="150"></canvas>
-                <div class="signature-buttons">
-                    <button type="button" class="btn btn-clear" onclick="clearSignature1()">Clear Signature</button>
-                </div>
-                <input type="hidden" id="signatureData1" name="Participant Signature" required>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="guardianName">PARENT/GUARDIAN NAME (PRINTED) <span class="required">*</span></label>
-                    <input type="text" id="guardianName" name="Parent/Guardian Name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="guardianDate1">DATE <span class="required">*</span></label>
-                    <input type="date" id="guardianDate1" name="Parent/Guardian Date" required>
-                </div>
-            </div>
-
-            <div class="signature-section">
-                <h3>PARENT/GUARDIAN SIGNATURE <span class="required">*</span></h3>
-                <canvas id="signaturePad2" class="signature-pad" width="700" height="150"></canvas>
-                <div class="signature-buttons">
-                    <button type="button" class="btn btn-clear" onclick="clearSignature2()">Clear Signature</button>
-                </div>
-                <input type="hidden" id="signatureData2" name="Parent/Guardian Signature" required>
-            </div>
-
-            <h3 class="section-title">Media Release Authorization</h3>
-            <div class="content-text">
-                <p>I give permission for my child to be photographed and/or videotaped for the purpose of advertising and promoting The Clemson Little Theatre and its programs. This includes rights for all visual media including but not limited to: newspapers, local periodicals, websites, social media, and television. I understand that there is no monetary compensation to CLT or my child for the use of these images.</p>
-            </div>
-
-            <div class="signature-section">
-                <h3>PARENT/GUARDIAN SIGNATURE (MEDIA RELEASE) <span class="required">*</span></h3>
-                <canvas id="signaturePad3" class="signature-pad" width="700" height="150"></canvas>
-                <div class="signature-buttons">
-                    <button type="button" class="btn btn-clear" onclick="clearSignature3()">Clear Signature</button>
-                </div>
-                <input type="hidden" id="signatureData3" name="Media Release Signature" required>
-            </div>
-
-            <div class="form-group">
-                <label for="mediaDate">DATE <span class="required">*</span></label>
-                <input type="date" id="mediaDate" name="Media Release Date" required>
-            </div>
-
-            <div class="closing-text">
-                <p><strong>Thank you for being part of The Clemson Little Theatre family!</strong></p>
-                <p>Together, we create magic on stage.</p>
-            </div>
-
-            <button type="submit" class="btn btn-submit">Submit Youth Agreement</button>
-        </form>
     </div>
 
     <script>
@@ -430,6 +291,10 @@
         let isDrawing1 = false;
         let lastX1 = 0;
         let lastY1 = 0;
+
+        // Set canvas actual size
+        canvas1.width = canvas1.offsetWidth;
+        canvas1.height = 150;
 
         ctx1.strokeStyle = '#000';
         ctx1.lineWidth = 2;
@@ -493,6 +358,10 @@
         let lastX2 = 0;
         let lastY2 = 0;
 
+        // Set canvas actual size
+        canvas2.width = canvas2.offsetWidth;
+        canvas2.height = 150;
+
         ctx2.strokeStyle = '#000';
         ctx2.lineWidth = 2;
         ctx2.lineCap = 'round';
@@ -554,6 +423,10 @@
         let isDrawing3 = false;
         let lastX3 = 0;
         let lastY3 = 0;
+
+        // Set canvas actual size
+        canvas3.width = canvas3.offsetWidth;
+        canvas3.height = 150;
 
         ctx3.strokeStyle = '#000';
         ctx3.lineWidth = 2;
@@ -658,6 +531,24 @@
         document.getElementById('participantDate1').valueAsDate = new Date();
         document.getElementById('guardianDate1').valueAsDate = new Date();
         document.getElementById('mediaDate').valueAsDate = new Date();
+
+        // Resize canvas on window resize
+        window.addEventListener('resize', function() {
+            // Store current drawings
+            const data1 = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
+            const data2 = ctx2.getImageData(0, 0, canvas2.width, canvas2.height);
+            const data3 = ctx3.getImageData(0, 0, canvas3.width, canvas3.height);
+
+            // Resize canvases
+            canvas1.width = canvas1.offsetWidth;
+            canvas2.width = canvas2.offsetWidth;
+            canvas3.width = canvas3.offsetWidth;
+
+            // Restore drawings
+            ctx1.putImageData(data1, 0, 0);
+            ctx2.putImageData(data2, 0, 0);
+            ctx3.putImageData(data3, 0, 0);
+        });
     </script>
 </body>
 </html>
