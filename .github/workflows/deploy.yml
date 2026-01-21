@@ -1,0 +1,27 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+      - development
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 8c175ea8edbea6fdf3d78dcf85e1b85c
+          projectName: miracle-worker-forms
+          directory: .
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
