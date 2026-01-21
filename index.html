@@ -1,292 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Miracle Worker - Paperwork Portal</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 20px;
-        }
-
-        .header h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-
-        .header h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            color: #666;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .intro-section {
-            background: #e3f2fd;
-            border-left: 4px solid #2196F3;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 5px;
-        }
-
-        .intro-section h3 {
-            color: #1565C0;
-            margin-bottom: 15px;
-        }
-
-        .intro-section p {
-            color: #1565C0;
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .intro-section ul {
-            margin-left: 20px;
-            color: #1565C0;
-        }
-
-        .intro-section li {
-            margin-bottom: 8px;
-        }
-
-        .section-title {
-            color: #667eea;
-            font-size: 1.5em;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
-        }
-
-        .forms-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .form-card {
-            background: #f9f9f9;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            padding: 25px;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .form-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
-            border-color: #667eea;
-        }
-
-        .form-card h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-
-        .form-card p {
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .form-card .badge {
-            display: inline-block;
-            padding: 5px 12px;
-            background: #667eea;
-            color: white;
-            border-radius: 20px;
-            font-size: 0.85em;
-            margin-bottom: 10px;
-        }
-
-        .form-card .badge.youth {
-            background: #ff6b6b;
-        }
-
-        .form-card .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-            font-weight: 600;
-        }
-
-        .form-card .btn:hover {
-            background: #5568d3;
-        }
-
-        .checklist {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            margin-top: 30px;
-            border-radius: 5px;
-        }
-
-        .checklist h3 {
-            color: #856404;
-            margin-bottom: 15px;
-        }
-
-        .checklist ul {
-            color: #856404;
-            margin-left: 20px;
-        }
-
-        .checklist li {
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #ddd;
-            text-align: center;
-            color: #666;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            .header h1 {
-                font-size: 2em;
-            }
-
-            .header h2 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Clemson Little Theatre</h1>
-            <h2>The Miracle Worker</h2>
-            <p>Digital Paperwork Portal</p>
-            <p style="font-size: 0.9em; color: #999;">Complete and submit your required forms online</p>
-        </div>
+<body class="bg-gradient-to-br from-purple-500 to-indigo-600 min-h-screen py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+        <!-- Main Card -->
+        <div class="card bg-base-100 shadow-2xl">
+            <div class="card-body p-6 md:p-12">
+                <!-- Header -->
+                <div class="text-center mb-8 pb-6 border-b-4 border-primary">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">Clemson Little Theatre</h1>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-2">The Miracle Worker</h2>
+                    <p class="text-xl text-gray-600 mb-1">Digital Paperwork Portal</p>
+                    <p class="text-sm text-gray-500">Complete and submit your required forms online</p>
+                </div>
 
-        <div class="intro-section">
-            <h3>Welcome, Cast & Crew!</h3>
-            <p>Thank you for being part of The Miracle Worker. To ensure everyone's safety and compliance with CLT policies, please complete all required paperwork below.</p>
-            <p><strong>How it works:</strong></p>
-            <ul>
-                <li>Click on each form below to open it in a new window</li>
-                <li>Fill out all required fields (marked with <span style="color: #ff6b6b;">*</span>)</li>
-                <li>Sign using your mouse, trackpad, or finger (on touch devices)</li>
-                <li>Click Submit - the form will be emailed automatically to Mike Shipley</li>
-                <li>You'll receive a confirmation once your submission is received</li>
-            </ul>
-        </div>
+                <!-- Welcome Section -->
+                <div class="alert alert-info mb-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Welcome, Cast & Crew!</h3>
+                        <p class="mb-2">Thank you for being part of The Miracle Worker. To ensure everyone's safety and compliance with CLT policies, please complete all required paperwork below.</p>
+                        <div class="mt-3">
+                            <p class="font-semibold mb-2">How it works:</p>
+                            <ul class="list-disc ml-6 space-y-1">
+                                <li>Click on each form card below to open it</li>
+                                <li>Fill out all required fields (marked with <span class="text-error font-bold">*</span>)</li>
+                                <li>Sign using your mouse, trackpad, or finger (on touch devices)</li>
+                                <li>Click Submit - forms are emailed automatically to Mike Shipley</li>
+                                <li>You'll receive a confirmation once your submission is received</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-        <h2 class="section-title">Required Forms for All Cast & Crew</h2>
+                <!-- Required Forms Section -->
+                <div class="divider divider-primary text-xl font-bold">Required Forms for All Cast & Crew</div>
 
-        <div class="forms-grid">
-            <div class="form-card" onclick="window.open('emergency_contact.html', '_blank')">
-                <span class="badge">Required</span>
-                <h3>Emergency Contact Form</h3>
-                <p>Provide your contact information and emergency contact details. Required for all participants.</p>
-                <a href="emergency_contact.html" target="_blank" class="btn">Fill Out Form</a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <!-- Emergency Contact Form -->
+                    <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('emergency_contact.html', '_blank')">
+                        <div class="card-body">
+                            <div class="badge badge-primary badge-lg mb-2">Required</div>
+                            <h3 class="card-title text-primary">Emergency Contact Form</h3>
+                            <p class="text-sm">Provide your contact information and emergency contact details. Required for all participants.</p>
+                            <div class="card-actions justify-end mt-4">
+                                <a href="emergency_contact.html" target="_blank" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">
+                                    Fill Out Form
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Youth Protection Policy -->
+                    <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('youth_protection_policy.html', '_blank')">
+                        <div class="card-body">
+                            <div class="badge badge-primary badge-lg mb-2">Required</div>
+                            <h3 class="card-title text-primary">Youth Protection Policy</h3>
+                            <p class="text-sm">Acknowledge and agree to CLT's Youth Protection Policy. Required for all adults working with youth participants.</p>
+                            <div class="card-actions justify-end mt-4">
+                                <a href="youth_protection_policy.html" target="_blank" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">
+                                    Fill Out Form
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Background Check -->
+                    <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('background_check.html', '_blank')">
+                        <div class="card-body">
+                            <div class="badge badge-primary badge-lg mb-2">Required</div>
+                            <h3 class="card-title text-primary">Background Check Authorization</h3>
+                            <p class="text-sm">Authorize CLT to conduct a background check. Required for all adults working with youth participants.</p>
+                            <div class="card-actions justify-end mt-4">
+                                <a href="background_check.html" target="_blank" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">
+                                    Fill Out Form
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cast & Crew Agreements Section -->
+                <div class="divider divider-primary text-xl font-bold">Cast & Crew Agreements</div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <!-- Adult Agreement -->
+                    <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('adult_cast_crew_agreement.html', '_blank')">
+                        <div class="card-body">
+                            <div class="badge badge-accent badge-lg mb-2">Adults (18+)</div>
+                            <h3 class="card-title text-primary">Adult Cast/Crew Agreement</h3>
+                            <p class="text-sm">Agreement and media release for adult participants (18 years and older). Includes participation terms and media consent.</p>
+                            <div class="card-actions justify-end mt-4">
+                                <a href="adult_cast_crew_agreement.html" target="_blank" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">
+                                    Fill Out Form
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Youth Agreement -->
+                    <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer" onclick="window.open('youth_cast_crew_agreement.html', '_blank')">
+                        <div class="card-body">
+                            <div class="badge badge-error badge-lg mb-2">Youth (Under 18)</div>
+                            <h3 class="card-title text-primary">Youth Cast/Crew Agreement</h3>
+                            <p class="text-sm">Agreement and media release for youth participants (under 18). Must be completed by parent/guardian.</p>
+                            <div class="card-actions justify-end mt-4">
+                                <a href="youth_cast_crew_agreement.html" target="_blank" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">
+                                    Fill Out Form
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checklist -->
+                <div class="alert alert-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Paperwork Checklist</h3>
+                        <p class="mb-2">Make sure you complete:</p>
+                        <ul class="list-disc ml-6 space-y-1 text-sm">
+                            <li><strong>Everyone:</strong> Emergency Contact Form</li>
+                            <li><strong>Adults (18+):</strong> Adult Cast/Crew Agreement + Youth Protection Policy + Background Check Authorization</li>
+                            <li><strong>Youth (Under 18):</strong> Youth Cast/Crew Agreement (completed by parent/guardian)</li>
+                            <li><strong>Adults working with youth:</strong> Background Check Authorization + Youth Protection Policy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="divider"></div>
+                <div class="text-center text-gray-600">
+                    <p class="mb-2"><strong>Questions?</strong> Contact Mike Shipley at <a href="mailto:mike.shipley@clemsonlittletheatre.com" class="link link-primary">mike.shipley@clemsonlittletheatre.com</a></p>
+                    <p class="text-sm text-gray-500">Clemson Little Theatre - The Miracle Worker Production</p>
+                </div>
             </div>
-
-            <div class="form-card" onclick="window.open('youth_protection_policy.html', '_blank')">
-                <span class="badge">Required</span>
-                <h3>Youth Protection Policy</h3>
-                <p>Acknowledge and agree to CLT's Youth Protection Policy. Required for all adults working with youth participants.</p>
-                <a href="youth_protection_policy.html" target="_blank" class="btn">Fill Out Form</a>
-            </div>
-
-            <div class="form-card" onclick="window.open('background_check.html', '_blank')">
-                <span class="badge">Required</span>
-                <h3>Background Check Authorization</h3>
-                <p>Authorize CLT to conduct a background check. Required for all adults working with youth participants.</p>
-                <a href="background_check.html" target="_blank" class="btn">Fill Out Form</a>
-            </div>
-        </div>
-
-        <h2 class="section-title">Cast & Crew Agreements</h2>
-
-        <div class="forms-grid">
-            <div class="form-card" onclick="window.open('adult_cast_crew_agreement.html', '_blank')">
-                <span class="badge">Adults (18+)</span>
-                <h3>Adult Cast/Crew Agreement</h3>
-                <p>Agreement and media release for adult participants (18 years and older). Includes participation terms and media consent.</p>
-                <a href="adult_cast_crew_agreement.html" target="_blank" class="btn">Fill Out Form</a>
-            </div>
-
-            <div class="form-card" onclick="window.open('youth_cast_crew_agreement.html', '_blank')">
-                <span class="badge youth">Youth (Under 18)</span>
-                <h3>Youth Cast/Crew Agreement</h3>
-                <p>Agreement and media release for youth participants (under 18). Must be completed by parent/guardian.</p>
-                <a href="youth_cast_crew_agreement.html" target="_blank" class="btn">Fill Out Form</a>
-            </div>
-        </div>
-
-        <div class="checklist">
-            <h3>Paperwork Checklist</h3>
-            <p>Make sure you complete:</p>
-            <ul>
-                <li><strong>Everyone:</strong> Emergency Contact Form</li>
-                <li><strong>Adults (18+):</strong> Adult Cast/Crew Agreement + Youth Protection Policy + Background Check Authorization</li>
-                <li><strong>Youth (Under 18):</strong> Youth Cast/Crew Agreement (completed by parent/guardian)</li>
-                <li><strong>Adults working with youth:</strong> Background Check Authorization + Youth Protection Policy</li>
-            </ul>
-        </div>
-
-        <div class="footer">
-            <p><strong>Questions?</strong> Contact Mike Shipley at <a href="mailto:mike.shipley@clemsonlittletheatre.com" style="color: #667eea;">mike.shipley@clemsonlittletheatre.com</a></p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Clemson Little Theatre - The Miracle Worker Production</p>
         </div>
     </div>
-
-    <script>
-        // Prevent card click when clicking on link directly
-        document.querySelectorAll('.form-card .btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-        });
-    </script>
 </body>
 </html>
