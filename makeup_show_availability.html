@@ -28,14 +28,6 @@
                     </div>
                 </div>
 
-                <div class="alert alert-info mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <div>
-                        <p class="font-semibold">Instructions:</p>
-                        <p class="text-sm">Check the box next to any date you <strong>CANNOT</strong> attend. Leave unchecked if you ARE available.</p>
-                    </div>
-                </div>
-
                 <form id="availabilityForm" action="https://api.web3forms.com/submit" method="POST">
                     <!-- Web3Forms Configuration -->
                     <input type="hidden" name="access_key" value="01c86d57-173b-4ad6-a227-421b6538aed6">
@@ -69,77 +61,99 @@
                     </div>
 
                     <!-- Availability Section -->
-                    <div class="divider mt-8 text-lg font-bold text-error">DATES I CANNOT ATTEND</div>
-                    <p class="text-sm text-gray-600 mb-4 text-center">Check the boxes for dates you are <strong>NOT</strong> available. Leave unchecked if you CAN attend.</p>
+                    <div class="divider mt-8 text-lg font-bold">YOUR AVAILABILITY</div>
+                    <p class="text-sm text-gray-600 mb-6 text-center">Please select your availability for each potential makeup show date. <span class="text-error font-semibold">All fields are required.</span></p>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                        <!-- Tuesday Feb 3 -->
-                        <div class="card bg-base-200 shadow">
-                            <div class="card-body p-4">
-                                <label class="flex items-start gap-4 cursor-pointer">
-                                    <input type="checkbox" name="Cannot Attend - Tuesday Feb 3" value="CANNOT ATTEND" class="checkbox checkbox-error mt-1">
-                                    <div>
-                                        <span class="font-bold text-lg">Tuesday, February 3rd</span>
-                                        <br>
-                                        <span class="badge badge-outline">7:00 PM</span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Thursday Feb 5 -->
-                        <div class="card bg-base-200 shadow">
-                            <div class="card-body p-4">
-                                <label class="flex items-start gap-4 cursor-pointer">
-                                    <input type="checkbox" name="Cannot Attend - Thursday Feb 5" value="CANNOT ATTEND" class="checkbox checkbox-error mt-1">
-                                    <div>
-                                        <span class="font-bold text-lg">Thursday, February 5th</span>
-                                        <br>
-                                        <span class="badge badge-outline">7:00 PM</span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Friday Feb 13 -->
-                        <div class="card bg-base-200 shadow">
-                            <div class="card-body p-4">
-                                <label class="flex items-start gap-4 cursor-pointer">
-                                    <input type="checkbox" name="Cannot Attend - Friday Feb 13" value="CANNOT ATTEND" class="checkbox checkbox-error mt-1">
-                                    <div>
-                                        <span class="font-bold text-lg">Friday, February 13th</span>
-                                        <br>
-                                        <span class="badge badge-outline">7:00 PM</span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Saturday Feb 14 -->
-                        <div class="card bg-base-200 shadow">
-                            <div class="card-body p-4">
-                                <label class="flex items-start gap-4 cursor-pointer">
-                                    <input type="checkbox" name="Cannot Attend - Saturday Feb 14" value="CANNOT ATTEND" class="checkbox checkbox-error mt-1">
-                                    <div>
-                                        <span class="font-bold text-lg">Saturday, February 14th</span>
-                                        <br>
-                                        <span class="badge badge-outline badge-secondary">3:00 PM (Matinee)</span>
-                                    </div>
-                                </label>
+                    <!-- Tuesday Feb 3 -->
+                    <div class="card bg-base-200 shadow mb-4">
+                        <div class="card-body p-4">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div>
+                                    <span class="font-bold text-lg">Tuesday, February 3rd</span>
+                                    <span class="badge badge-outline ml-2">7:00 PM</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="Tuesday Feb 3 - 7:00 PM" value="YES - I can attend/perform" class="radio radio-success" required>
+                                        <span class="text-success font-semibold">Yes, I can attend</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="Tuesday Feb 3 - 7:00 PM" value="NO - I cannot attend/perform" class="radio radio-error">
+                                        <span class="text-error font-semibold">No, I cannot attend</span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- All Available Option -->
-                    <div class="form-control mb-6">
-                        <label class="flex items-center gap-4 cursor-pointer justify-center p-4 bg-success/10 rounded-lg border-2 border-success">
-                            <input type="checkbox" name="Available All Dates" value="YES - Available for ALL dates" class="checkbox checkbox-success">
-                            <span class="font-bold text-success">I am available for ALL of the above dates</span>
-                        </label>
+                    <!-- Thursday Feb 5 -->
+                    <div class="card bg-base-200 shadow mb-4">
+                        <div class="card-body p-4">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div>
+                                    <span class="font-bold text-lg">Thursday, February 5th</span>
+                                    <span class="badge badge-outline ml-2">7:00 PM</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="Thursday Feb 5 - 7:00 PM" value="YES - I can attend/perform" class="radio radio-success" required>
+                                        <span class="text-success font-semibold">Yes, I can attend</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="Thursday Feb 5 - 7:00 PM" value="NO - I cannot attend/perform" class="radio radio-error">
+                                        <span class="text-error font-semibold">No, I cannot attend</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Friday Feb 13 -->
+                    <div class="card bg-base-200 shadow mb-4">
+                        <div class="card-body p-4">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div>
+                                    <span class="font-bold text-lg">Friday, February 13th</span>
+                                    <span class="badge badge-outline ml-2">7:00 PM</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="Friday Feb 13 - 7:00 PM" value="YES - I can attend/perform" class="radio radio-success" required>
+                                        <span class="text-success font-semibold">Yes, I can attend</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="Friday Feb 13 - 7:00 PM" value="NO - I cannot attend/perform" class="radio radio-error">
+                                        <span class="text-error font-semibold">No, I cannot attend</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Saturday Feb 14 -->
+                    <div class="card bg-base-200 shadow mb-4">
+                        <div class="card-body p-4">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div>
+                                    <span class="font-bold text-lg">Saturday, February 14th</span>
+                                    <span class="badge badge-secondary ml-2">3:00 PM Matinee</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="Saturday Feb 14 - 3:00 PM" value="YES - I can attend/perform" class="radio radio-success" required>
+                                        <span class="text-success font-semibold">Yes, I can attend</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="Saturday Feb 14 - 3:00 PM" value="NO - I cannot attend/perform" class="radio radio-error">
+                                        <span class="text-error font-semibold">No, I cannot attend</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Comments -->
-                    <div class="form-control mb-6">
+                    <div class="form-control mb-6 mt-6">
                         <label class="label">
                             <span class="label-text font-semibold">ADDITIONAL COMMENTS OR NOTES</span>
                         </label>
@@ -151,7 +165,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         <div>
                             <p class="font-bold">Response Required</p>
-                            <p class="text-sm">All cast and crew members must respond to this survey. Please submit even if you are available for all dates.</p>
+                            <p class="text-sm">All cast and crew members must respond to this survey so we can give options to our patrons.</p>
                         </div>
                     </div>
 
