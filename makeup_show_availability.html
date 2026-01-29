@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Show Availability - The Miracle Worker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-500 to-indigo-600 min-h-screen py-8 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="card bg-base-100 shadow-2xl">
+            <div class="card-body">
+                <!-- Header -->
+                <div class="text-center mb-6">
+                    <h1 class="text-3xl font-bold text-primary mb-2">THE CLEMSON LITTLE THEATRE</h1>
+                    <h2 class="text-2xl font-semibold">The Miracle Worker</h2>
+                    <h3 class="text-xl text-gray-600 mt-2">Makeup Show Availability Survey</h3>
+                    <div class="divider"></div>
+                </div>
+
+                <!-- Context Alert -->
+                <div class="alert alert-warning mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                    <div>
+                        <h3 class="font-bold">Snow Cancellation Makeup Shows</h3>
+                        <p class="text-sm">Due to the snow this weekend, we are rescheduling the cancelled Saturday and Sunday performances. Please let us know your availability for the potential makeup dates below.</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-info mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div>
+                        <p class="font-semibold">Instructions:</p>
+                        <p class="text-sm">Check the box next to any date you <strong>CANNOT</strong> attend. Leave unchecked if you ARE available.</p>
+                    </div>
+                </div>
+
+                <form id="availabilityForm" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Configuration -->
+                    <input type="hidden" name="access_key" value="01c86d57-173b-4ad6-a227-421b6538aed6">
+                    <input type="hidden" name="subject" value="Makeup Show Availability - Miracle Worker">
+                    <input type="hidden" name="redirect" value="https://miracle-worker-forms.pages.dev/thank-you.html">
+                    <input type="hidden" name="from_name" value="Miracle Worker Forms">
+
+                    <!-- Name and Role -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-semibold">YOUR NAME <span class="text-error">*</span></span>
+                            </label>
+                            <input type="text" id="name" name="Name" class="input input-bordered" required>
+                        </div>
+
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-semibold">ROLE IN PRODUCTION <span class="text-error">*</span></span>
+                            </label>
+                            <input type="text" id="role" name="Role" class="input input-bordered" placeholder="e.g., Cast - Helen, Crew - Lights" required>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-control mb-6">
+                        <label class="label">
+                            <span class="label-text font-semibold">EMAIL ADDRESS <span class="text-error">*</span></span>
+                        </label>
+                        <input type="email" id="email" name="Email" class="input input-bordered" required>
+                    </div>
+
+                    <!-- Availability Section -->
+                    <div class="divider mt-8 text-lg font-bold text-error">DATES I CANNOT ATTEND</div>
+                    <p class="text-sm text-gray-600 mb-4 text-center">Check the boxes for dates you are <strong>NOT</strong> available. Leave unchecked if you CAN attend.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <!-- Tuesday Feb 3 -->
+                        <div class="card bg-base-200 shadow">
+                            <div class="card-body p-4">
+                                <label class="flex items-start gap-4 cursor-pointer">
+                                    <input type="checkbox" name="Cannot Attend - Tuesday Feb 3" value="CANNOT ATTEND" class="checkbox checkbox-error mt-1">
+                                    <div>
+                                        <span class="font-bold text-lg">Tuesday, February 3rd</span>
+                                        <br>
+                                        <span class="badge badge-outline">7:00 PM</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Thursday Feb 5 -->
+                        <div class="card bg-base-200 shadow">
+                            <div class="card-body p-4">
+                                <label class="flex items-start gap-4 cursor-pointer">
+                                    <input type="checkbox" name="Cannot Attend - Thursday Feb 5" value="CANNOT ATTEND" class="checkbox checkbox-error mt-1">
+                                    <div>
+                                        <span class="font-bold text-lg">Thursday, February 5th</span>
+                                        <br>
+                                        <span class="badge badge-outline">7:00 PM</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Friday Feb 13 -->
+                        <div class="card bg-base-200 shadow">
+                            <div class="card-body p-4">
+                                <label class="flex items-start gap-4 cursor-pointer">
+                                    <input type="checkbox" name="Cannot Attend - Friday Feb 13" value="CANNOT ATTEND" class="checkbox checkbox-error mt-1">
+                                    <div>
+                                        <span class="font-bold text-lg">Friday, February 13th</span>
+                                        <br>
+                                        <span class="badge badge-outline">7:00 PM</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Saturday Feb 14 -->
+                        <div class="card bg-base-200 shadow">
+                            <div class="card-body p-4">
+                                <label class="flex items-start gap-4 cursor-pointer">
+                                    <input type="checkbox" name="Cannot Attend - Saturday Feb 14" value="CANNOT ATTEND" class="checkbox checkbox-error mt-1">
+                                    <div>
+                                        <span class="font-bold text-lg">Saturday, February 14th</span>
+                                        <br>
+                                        <span class="badge badge-outline badge-secondary">3:00 PM (Matinee)</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- All Available Option -->
+                    <div class="form-control mb-6">
+                        <label class="flex items-center gap-4 cursor-pointer justify-center p-4 bg-success/10 rounded-lg border-2 border-success">
+                            <input type="checkbox" name="Available All Dates" value="YES - Available for ALL dates" class="checkbox checkbox-success">
+                            <span class="font-bold text-success">I am available for ALL of the above dates</span>
+                        </label>
+                    </div>
+
+                    <!-- Comments -->
+                    <div class="form-control mb-6">
+                        <label class="label">
+                            <span class="label-text font-semibold">ADDITIONAL COMMENTS OR NOTES</span>
+                        </label>
+                        <textarea id="comments" name="Comments" class="textarea textarea-bordered h-24" placeholder="Any additional information about your availability, partial conflicts, etc."></textarea>
+                    </div>
+
+                    <!-- Response Needed Alert -->
+                    <div class="alert alert-error mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <div>
+                            <p class="font-bold">Response Required</p>
+                            <p class="text-sm">All cast and crew members must respond to this survey. Please submit even if you are available for all dates.</p>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-lg w-full">Submit Availability</button>
+                </form>
+
+                <!-- Footer -->
+                <div class="divider mt-8"></div>
+                <div class="text-center text-gray-600">
+                    <p class="mb-2"><strong>Questions?</strong> Contact Mike Shipley at <a href="mailto:mike.shipley@clemsonlittletheatre.com" class="link link-primary">mike.shipley@clemsonlittletheatre.com</a></p>
+                    <p class="text-sm text-gray-500">Clemson Little Theatre - The Miracle Worker Production</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
